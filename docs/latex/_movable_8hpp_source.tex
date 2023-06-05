@@ -1,0 +1,20 @@
+\hypertarget{_movable_8hpp_source}{}\doxysection{Movable.\+hpp}
+\label{_movable_8hpp_source}\index{include/Movable.hpp@{include/Movable.hpp}}
+\mbox{\hyperlink{_movable_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_entity_8hpp}{Entity.hpp}}"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_movable}{Movable}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_entity}{Entity}}}
+\DoxyCodeLine{00005\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{class_movable}{Movable}}(\mbox{\hyperlink{class_position}{Position}}\ p\_pos,\ \mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\_Texture}}\ *p\_tex,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}});}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{class_position}{Position}}\ \mbox{\hyperlink{class_movable_ae260c4bb16981984f20bda72a586cf0a}{getMovementVector}}();}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_movable_afc5ced2d1569775b62e9d6198779c622}{setMovementVector}}(\mbox{\hyperlink{class_position}{Position}}\ new\_vector);}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_movable_a1bf544913ec439bb6841bf85880f87ab}{willCollideWith}}(\mbox{\hyperlink{class_entity}{Entity}}*\ entity,\ \mbox{\hyperlink{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ direction\ =\ \mbox{\hyperlink{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa627abe5a430420baf29ebe1940a7f2fb}{BOTH}});}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_entity}{Entity}}*\ \mbox{\hyperlink{class_movable_ae1c993a10326aa91adf723da44d329da}{willCollideWithAny}}(\mbox{\hyperlink{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ direction\ =\ \mbox{\hyperlink{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa627abe5a430420baf29ebe1940a7f2fb}{BOTH}},\ std::vector<Entity*>\ ents\ =\ \mbox{\hyperlink{class_entity_a438762a5daaae32a28fb9c6a8e17518f}{entities}});}
+\DoxyCodeLine{00012\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{class_position}{Position}}\ \mbox{\hyperlink{class_movable_ae873752e2f7c5f9ab856ff9cadaf5bf5}{movement\_vector}};}
+\DoxyCodeLine{00014\ \};}
+
+\end{DoxyCode}

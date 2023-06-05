@@ -1,0 +1,147 @@
+\hypertarget{class_followable}{}\doxysection{Followable Class Reference}
+\label{class_followable}\index{Followable@{Followable}}
+
+
+{\ttfamily \#include $<$Followable.\+hpp$>$}
+
+Inheritance diagram for Followable\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_followable}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_followable_a1d98df03dea6b6e2e4f8048fd34277ee}{Followable}} (\mbox{\hyperlink{class_position}{Position}} p\+\_\+pos, \mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$p\+\_\+tex, int \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}}, int \mbox{\hyperlink{class_followable_a4ddbfe7dcd439c8fff1fcd4434d86cad}{window\+\_\+width}}, int \mbox{\hyperlink{class_followable_a1c31fc96215891ec25a92e28e8ff4393}{window\+\_\+height}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_followable_ae23e9ca46bdbc23835322c43ba7347e1}{set\+Movement\+Vector}} (\mbox{\hyperlink{class_position}{Position}} new\+\_\+vector, float speed)
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_followable_aece5eb12249133c2e323b264f72b719a}{next\+Step}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_movable}{Movable}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_movable_ade056c66e9402de8be6b3c4ed4d36f01}{Movable}} (\mbox{\hyperlink{class_position}{Position}} p\+\_\+pos, \mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$p\+\_\+tex, int \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}})
+\item 
+\mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_movable_ae260c4bb16981984f20bda72a586cf0a}{get\+Movement\+Vector}} ()
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_movable_afc5ced2d1569775b62e9d6198779c622}{set\+Movement\+Vector}} (\mbox{\hyperlink{class_position}{Position}} new\+\_\+vector)
+\item 
+bool \mbox{\hyperlink{class_movable_a1bf544913ec439bb6841bf85880f87ab}{will\+Collide\+With}} (\mbox{\hyperlink{class_entity}{Entity}} $\ast$entity, \mbox{\hyperlink{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} direction=\mbox{\hyperlink{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa627abe5a430420baf29ebe1940a7f2fb}{BOTH}})
+\item 
+\mbox{\hyperlink{class_entity}{Entity}} $\ast$ \mbox{\hyperlink{class_movable_ae1c993a10326aa91adf723da44d329da}{will\+Collide\+With\+Any}} (\mbox{\hyperlink{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} direction=\mbox{\hyperlink{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa627abe5a430420baf29ebe1940a7f2fb}{BOTH}}, std\+::vector$<$ \mbox{\hyperlink{class_entity}{Entity}} $\ast$ $>$ ents=\mbox{\hyperlink{class_entity_a438762a5daaae32a28fb9c6a8e17518f}{entities}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_entity_a03295af11e6abad8e19d55f0df24026f}{Entity}} (\mbox{\hyperlink{class_position}{Position}} p\+\_\+pos, \mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$p\+\_\+tex, int \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}})
+\item 
+\mbox{\hyperlink{class_entity_adf6d3f7cb1b2ba029b6b048a395cc8ae}{$\sim$\+Entity}} ()
+\item 
+\mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_entity_a51d7ac9dcaa0d12657fbd97b272fca9f}{get\+Position}} ()
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_entity_ad14ffed3a2388f9d3280fdc59ee5fbd0}{set\+Position}} (\mbox{\hyperlink{class_position}{Position}} new\+\_\+pos)
+\item 
+\mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$ \mbox{\hyperlink{class_entity_a25b50625a770e24dcafc25aa505fc54d}{get\+Texture}} ()
+\item 
+\mbox{\hyperlink{struct_s_d_l___rect}{SDL\+\_\+\+Rect}} \mbox{\hyperlink{class_entity_a20a9a1b66c626ef91d2ec6884c887988}{get\+Current\+Frame}} ()
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_entity_ad70d8510cd8834aa42985cd6ff76ea6b}{toggle\+Renderable}} ()
+\item 
+int \mbox{\hyperlink{class_entity_a352c44a083ab3d5d06cf4e0f6fe7606e}{get\+Size}} ()
+\item 
+\mbox{\hyperlink{_entity_8hpp_ad79a57ed3105eb60d991a1aeb4a9dc44}{Entity\+Type}} \mbox{\hyperlink{class_entity_ab3a2d08c8cf0a01210e2ece8ff721174}{get\+Type}} ()
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_entity_aedbd9622f9be98c2d28bd664442fbef8}{set\+Type}} (\mbox{\hyperlink{_entity_8hpp_ad79a57ed3105eb60d991a1aeb4a9dc44}{Entity\+Type}} \mbox{\hyperlink{_s_d_l__opengl_8h_ad5ddf6fca7b585646515660e810e0188}{type}})
+\item 
+\mbox{\hyperlink{_entity_8hpp_a884b333dc836c3eabfe7a675c0c72022}{Entity\+State}} \mbox{\hyperlink{class_entity_af1c844c5aba6d74840b84dbe55cfc91b}{get\+State}} ()
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_entity_ae47679578adae2fb00f618b1e7e9f565}{set\+State}} (\mbox{\hyperlink{_entity_8hpp_a884b333dc836c3eabfe7a675c0c72022}{Entity\+State}} \mbox{\hyperlink{class_entity_a5a61b24410d1e9e7560ab142cf439dc8}{state}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_followable_a661f9c1d14ef836d127293d51b92f925}{normalize\+Vector}} (\mbox{\hyperlink{class_position}{Position}} vector, float step=1.\+0)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_entity_a6e6dcdb945a8b7e255e550c9b960097f}{is\+Position\+Taken}} (\mbox{\hyperlink{class_position}{Position}} \&pos, int \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}}, \mbox{\hyperlink{class_entity}{Entity}} $\ast$entity)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_followable_a4ddbfe7dcd439c8fff1fcd4434d86cad}{window\+\_\+width}}
+\item 
+int \mbox{\hyperlink{class_followable_a1c31fc96215891ec25a92e28e8ff4393}{window\+\_\+height}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_movable}{Movable}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_movable_ae873752e2f7c5f9ab856ff9cadaf5bf5}{movement\+\_\+vector}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_entity_8hpp_ad79a57ed3105eb60d991a1aeb4a9dc44}{Entity\+Type}} \mbox{\hyperlink{class_entity_a4bc4656e671f86ebd33eaa78d1855ea9}{type}}
+\item 
+\mbox{\hyperlink{_entity_8hpp_a884b333dc836c3eabfe7a675c0c72022}{Entity\+State}} \mbox{\hyperlink{class_entity_a5a61b24410d1e9e7560ab142cf439dc8}{state}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{class_entity}{Entity}} $\ast$ $>$ \mbox{\hyperlink{class_entity_a438762a5daaae32a28fb9c6a8e17518f}{entities}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_followable_a1d98df03dea6b6e2e4f8048fd34277ee}\label{class_followable_a1d98df03dea6b6e2e4f8048fd34277ee}} 
+\index{Followable@{Followable}!Followable@{Followable}}
+\index{Followable@{Followable}!Followable@{Followable}}
+\doxysubsubsection{\texorpdfstring{Followable()}{Followable()}}
+{\footnotesize\ttfamily Followable\+::\+Followable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}}}]{p\+\_\+pos,  }\item[{\mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$}]{p\+\_\+tex,  }\item[{int}]{size,  }\item[{int}]{window\+\_\+width,  }\item[{int}]{window\+\_\+height }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_followable_aece5eb12249133c2e323b264f72b719a}\label{class_followable_aece5eb12249133c2e323b264f72b719a}} 
+\index{Followable@{Followable}!nextStep@{nextStep}}
+\index{nextStep@{nextStep}!Followable@{Followable}}
+\doxysubsubsection{\texorpdfstring{nextStep()}{nextStep()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Followable\+::next\+Step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_followable_a661f9c1d14ef836d127293d51b92f925}\label{class_followable_a661f9c1d14ef836d127293d51b92f925}} 
+\index{Followable@{Followable}!normalizeVector@{normalizeVector}}
+\index{normalizeVector@{normalizeVector}!Followable@{Followable}}
+\doxysubsubsection{\texorpdfstring{normalizeVector()}{normalizeVector()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_position}{Position}} Followable\+::normalize\+Vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}}}]{vector,  }\item[{float}]{step = {\ttfamily 1.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_followable_ae23e9ca46bdbc23835322c43ba7347e1}\label{class_followable_ae23e9ca46bdbc23835322c43ba7347e1}} 
+\index{Followable@{Followable}!setMovementVector@{setMovementVector}}
+\index{setMovementVector@{setMovementVector}!Followable@{Followable}}
+\doxysubsubsection{\texorpdfstring{setMovementVector()}{setMovementVector()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Followable\+::set\+Movement\+Vector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}}}]{new\+\_\+vector,  }\item[{float}]{speed }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_followable_a1c31fc96215891ec25a92e28e8ff4393}\label{class_followable_a1c31fc96215891ec25a92e28e8ff4393}} 
+\index{Followable@{Followable}!window\_height@{window\_height}}
+\index{window\_height@{window\_height}!Followable@{Followable}}
+\doxysubsubsection{\texorpdfstring{window\_height}{window\_height}}
+{\footnotesize\ttfamily int Followable\+::window\+\_\+height\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_followable_a4ddbfe7dcd439c8fff1fcd4434d86cad}\label{class_followable_a4ddbfe7dcd439c8fff1fcd4434d86cad}} 
+\index{Followable@{Followable}!window\_width@{window\_width}}
+\index{window\_width@{window\_width}!Followable@{Followable}}
+\doxysubsubsection{\texorpdfstring{window\_width}{window\_width}}
+{\footnotesize\ttfamily int Followable\+::window\+\_\+width\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_followable_8hpp}{Followable.\+hpp}}\item 
+src/\mbox{\hyperlink{_followable_8cpp}{Followable.\+cpp}}\end{DoxyCompactItemize}

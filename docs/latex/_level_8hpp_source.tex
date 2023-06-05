@@ -1,0 +1,44 @@
+\hypertarget{_level_8hpp_source}{}\doxysection{Level.\+hpp}
+\label{_level_8hpp_source}\index{include/Level.hpp@{include/Level.hpp}}
+\mbox{\hyperlink{_level_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_s_d_l_8h}{SDL2/SDL.h}}>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_s_d_l__image_8h}{SDL2/SDL\_image.h}}>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_entity_8hpp}{Entity.hpp}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_enemy_8hpp}{Enemy.hpp}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_collectible_8hpp}{Collectible.hpp}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_level}{Level}}}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \textcolor{comment}{//level\ projektor\ class\ where\ all\ levels\ will\ be\ constructed}}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{class_level}{Level}}(std::string\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_aaced7cfc21e7d37775d6921bb8177239}{name}});}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_a59f00cc3b03ea9862e0d8c9a039506be}{createEntity}}(\mbox{\hyperlink{class_position}{Position}}\ p\_pos,\ \mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\_Texture}}\ *p\_tex,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}});}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_ad79701e19397c322191cc654199d45d2}{createEnemy}}(\mbox{\hyperlink{class_position}{Position}}\ p\_pos,\ \mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\_Texture}}\ *p\_tex,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}},\ \textcolor{keywordtype}{int}\ window\_width,\ \textcolor{keywordtype}{int}\ window\_height);}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_ad173c8355da8cae686bcfcac0e9d3cc2}{deleteEnemy}}(\mbox{\hyperlink{class_enemy}{Enemy}}*\ enemy);}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_a0e3c9905e854915e1db6d01da617edc6}{createCollectible}}(\mbox{\hyperlink{class_position}{Position}}\ p\_pos,\ \mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\_Texture}}\ *p\_tex,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}});}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_a395ad3dfec7af00063fd8b30cd354eac}{deleteCollectible}}(\mbox{\hyperlink{class_collectible}{Collectible}}*\ collectible);}
+\DoxyCodeLine{00019\ \ \ \ \ std::string\ \mbox{\hyperlink{class_level_ad8d712b35c26e444191ebef93d84a05f}{getName}}();}
+\DoxyCodeLine{00020\ \ \ \ \ std::vector<Entity*>\ \mbox{\hyperlink{class_level_adc3b4562508aac43e0f66af7368ad621}{getEntities}}();}
+\DoxyCodeLine{00021\ \ \ \ \ std::vector<Enemy*>\ \mbox{\hyperlink{class_level_a760e00718aff534a4606b206bd293af3}{getEnemies}}();}
+\DoxyCodeLine{00022\ \ \ \ \ std::vector<Collectible*>\ \mbox{\hyperlink{class_level_a97621d6c6fe6043dff1459764172aa65}{getCollectibles}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_aab1856413f61864618e442a9b7363e5f}{setLevelToTheLeft}}(std::string\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_aaced7cfc21e7d37775d6921bb8177239}{name}});}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_a21893818f6791a5009e153208794cc37}{setLevelToTheRight}}(std::string\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_aaced7cfc21e7d37775d6921bb8177239}{name}});}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_a6bd7a9761bcdc15dbef4ce936a1f8578}{setLevelUnder}}(std::string\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_aaced7cfc21e7d37775d6921bb8177239}{name}});}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_level_a49184bc72205f26340acf60f32c43eac}{setLevelAbove}}(std::string\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_aaced7cfc21e7d37775d6921bb8177239}{name}});}
+\DoxyCodeLine{00028\ \ \ \ \ std::string\ \mbox{\hyperlink{class_level_aca2f03879033a03189cbc86aa288dc05}{getLevelToTheLeft}}();}
+\DoxyCodeLine{00029\ \ \ \ \ std::string\ \mbox{\hyperlink{class_level_a0e25060718537eb9d347b92fa2e648cb}{getLevelToTheRight}}();}
+\DoxyCodeLine{00030\ \ \ \ \ std::string\ \mbox{\hyperlink{class_level_a76ec9f5dc9ff326a4ae005a90f50ae47}{getLevelUnder}}();}
+\DoxyCodeLine{00031\ \ \ \ \ std::string\ \mbox{\hyperlink{class_level_a4a99197c828eaee9f89dd2b848165b71}{getLevelAbove}}();}
+\DoxyCodeLine{00032\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00033\ \ \ \ \ std::string\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_aaced7cfc21e7d37775d6921bb8177239}{name}};}
+\DoxyCodeLine{00034\ \ \ \ \ std::string\ name\_left,\ name\_right,\ name\_up,\ name\_down;}
+\DoxyCodeLine{00035\ \ \ \ \ std::vector<Entity*>\ entities;}
+\DoxyCodeLine{00036\ \ \ \ \ std::vector<Enemy*>\ enemies;}
+\DoxyCodeLine{00037\ \ \ \ \ std::vector<Collectible*>\ collectibles;}
+\DoxyCodeLine{00038\ \};}
+
+\end{DoxyCode}

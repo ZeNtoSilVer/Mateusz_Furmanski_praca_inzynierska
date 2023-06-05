@@ -1,0 +1,24 @@
+\hypertarget{_followable_8hpp_source}{}\doxysection{Followable.\+hpp}
+\label{_followable_8hpp_source}\index{include/Followable.hpp@{include/Followable.hpp}}
+\mbox{\hyperlink{_followable_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_movable_8hpp}{Movable.hpp}}"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//notka\ dla\ mnie:\ jeśli\ coś\ ma\ dziedziczyć\ po\ klasie\ Bullet\ to\ bullet\ nie\ może\ dziedziczyć\ po}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//Entity\ wirtualnie,\ gdyż\ kolejna\ klasa\ nie\ będzie\ widziecieć\ metod\ z\ Entity}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//Dodatkowo,\ dziedziczenie\ musi\ być\ public,\ gdyż\ wszystkie\ metody\ będą\ prywatne\ i\ niedostępne\ dla\ kolejnej\ klasy}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_followable}{Followable}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_movable}{Movable}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_followable}{Followable}}(\mbox{\hyperlink{class_position}{Position}}\ p\_pos,\ \mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\_Texture}}\ *p\_tex,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_followable_a4ddbfe7dcd439c8fff1fcd4434d86cad}{window\_width}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_followable_a1c31fc96215891ec25a92e28e8ff4393}{window\_height}});}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_followable_ae23e9ca46bdbc23835322c43ba7347e1}{setMovementVector}}(\mbox{\hyperlink{class_position}{Position}}\ new\_vector,\ \textcolor{keywordtype}{float}\ speed);}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_followable_aece5eb12249133c2e323b264f72b719a}{nextStep}}();}
+\DoxyCodeLine{00013\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00014\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_followable_a4ddbfe7dcd439c8fff1fcd4434d86cad}{window\_width}};}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_followable_a1c31fc96215891ec25a92e28e8ff4393}{window\_height}};}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{class_position}{Position}}\ \mbox{\hyperlink{class_followable_a661f9c1d14ef836d127293d51b92f925}{normalizeVector}}(\mbox{\hyperlink{class_position}{Position}}\ vector,\ \textcolor{keywordtype}{float}\ step\ =\ 1.0);}
+\DoxyCodeLine{00018\ \};}
+
+\end{DoxyCode}

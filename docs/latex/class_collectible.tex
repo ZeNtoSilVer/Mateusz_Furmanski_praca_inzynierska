@@ -1,0 +1,96 @@
+\hypertarget{class_collectible}{}\doxysection{Collectible Class Reference}
+\label{class_collectible}\index{Collectible@{Collectible}}
+
+
+{\ttfamily \#include $<$Collectible.\+hpp$>$}
+
+Inheritance diagram for Collectible\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_collectible}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_collectible_acd65e858551a55389991af05bc552e07}{Collectible}} (\mbox{\hyperlink{class_position}{Position}} p\+\_\+pos, \mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$p\+\_\+tex, int \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}})
+\item 
+bool \mbox{\hyperlink{class_collectible_aee58c6b78bd13ff41674b2e42ce7ea36}{is\+Collected}} ()
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_collectible_afe3cceade4479267f42ee31e5caaa19f}{get\+Collected}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_entity_a03295af11e6abad8e19d55f0df24026f}{Entity}} (\mbox{\hyperlink{class_position}{Position}} p\+\_\+pos, \mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$p\+\_\+tex, int \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}})
+\item 
+\mbox{\hyperlink{class_entity_adf6d3f7cb1b2ba029b6b048a395cc8ae}{$\sim$\+Entity}} ()
+\item 
+\mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_entity_a51d7ac9dcaa0d12657fbd97b272fca9f}{get\+Position}} ()
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_entity_ad14ffed3a2388f9d3280fdc59ee5fbd0}{set\+Position}} (\mbox{\hyperlink{class_position}{Position}} new\+\_\+pos)
+\item 
+\mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$ \mbox{\hyperlink{class_entity_a25b50625a770e24dcafc25aa505fc54d}{get\+Texture}} ()
+\item 
+\mbox{\hyperlink{struct_s_d_l___rect}{SDL\+\_\+\+Rect}} \mbox{\hyperlink{class_entity_a20a9a1b66c626ef91d2ec6884c887988}{get\+Current\+Frame}} ()
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_entity_ad70d8510cd8834aa42985cd6ff76ea6b}{toggle\+Renderable}} ()
+\item 
+int \mbox{\hyperlink{class_entity_a352c44a083ab3d5d06cf4e0f6fe7606e}{get\+Size}} ()
+\item 
+\mbox{\hyperlink{_entity_8hpp_ad79a57ed3105eb60d991a1aeb4a9dc44}{Entity\+Type}} \mbox{\hyperlink{class_entity_ab3a2d08c8cf0a01210e2ece8ff721174}{get\+Type}} ()
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_entity_aedbd9622f9be98c2d28bd664442fbef8}{set\+Type}} (\mbox{\hyperlink{_entity_8hpp_ad79a57ed3105eb60d991a1aeb4a9dc44}{Entity\+Type}} \mbox{\hyperlink{_s_d_l__opengl_8h_ad5ddf6fca7b585646515660e810e0188}{type}})
+\item 
+\mbox{\hyperlink{_entity_8hpp_a884b333dc836c3eabfe7a675c0c72022}{Entity\+State}} \mbox{\hyperlink{class_entity_af1c844c5aba6d74840b84dbe55cfc91b}{get\+State}} ()
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_entity_ae47679578adae2fb00f618b1e7e9f565}{set\+State}} (\mbox{\hyperlink{_entity_8hpp_a884b333dc836c3eabfe7a675c0c72022}{Entity\+State}} \mbox{\hyperlink{class_entity_a5a61b24410d1e9e7560ab142cf439dc8}{state}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{class_entity}{Entity}} $\ast$ $>$ \mbox{\hyperlink{class_entity_a438762a5daaae32a28fb9c6a8e17518f}{entities}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_entity_a6e6dcdb945a8b7e255e550c9b960097f}{is\+Position\+Taken}} (\mbox{\hyperlink{class_position}{Position}} \&pos, int \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}}, \mbox{\hyperlink{class_entity}{Entity}} $\ast$entity)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_entity_8hpp_ad79a57ed3105eb60d991a1aeb4a9dc44}{Entity\+Type}} \mbox{\hyperlink{class_entity_a4bc4656e671f86ebd33eaa78d1855ea9}{type}}
+\item 
+\mbox{\hyperlink{_entity_8hpp_a884b333dc836c3eabfe7a675c0c72022}{Entity\+State}} \mbox{\hyperlink{class_entity_a5a61b24410d1e9e7560ab142cf439dc8}{state}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_collectible_acd65e858551a55389991af05bc552e07}\label{class_collectible_acd65e858551a55389991af05bc552e07}} 
+\index{Collectible@{Collectible}!Collectible@{Collectible}}
+\index{Collectible@{Collectible}!Collectible@{Collectible}}
+\doxysubsubsection{\texorpdfstring{Collectible()}{Collectible()}}
+{\footnotesize\ttfamily Collectible\+::\+Collectible (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}}}]{p\+\_\+pos,  }\item[{\mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$}]{p\+\_\+tex,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_collectible_afe3cceade4479267f42ee31e5caaa19f}\label{class_collectible_afe3cceade4479267f42ee31e5caaa19f}} 
+\index{Collectible@{Collectible}!getCollected@{getCollected}}
+\index{getCollected@{getCollected}!Collectible@{Collectible}}
+\doxysubsubsection{\texorpdfstring{getCollected()}{getCollected()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Collectible\+::get\+Collected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_collectible_aee58c6b78bd13ff41674b2e42ce7ea36}\label{class_collectible_aee58c6b78bd13ff41674b2e42ce7ea36}} 
+\index{Collectible@{Collectible}!isCollected@{isCollected}}
+\index{isCollected@{isCollected}!Collectible@{Collectible}}
+\doxysubsubsection{\texorpdfstring{isCollected()}{isCollected()}}
+{\footnotesize\ttfamily bool Collectible\+::is\+Collected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_collectible_8hpp}{Collectible.\+hpp}}\item 
+src/\mbox{\hyperlink{_collectible_8cpp}{Collectible.\+cpp}}\end{DoxyCompactItemize}

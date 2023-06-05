@@ -1,0 +1,117 @@
+\hypertarget{class_level_manager}{}\doxysection{Level\+Manager Class Reference}
+\label{class_level_manager}\index{LevelManager@{LevelManager}}
+
+
+{\ttfamily \#include $<$Level\+Manager.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_level_manager_a698b5e17670ebc60bb7c9a552a703461}{Level\+Manager}} (\mbox{\hyperlink{class_render_window}{Render\+Window}} \&window, int window\+\_\+width, int window\+\_\+height)
+\item 
+\mbox{\hyperlink{class_level}{Level}} $\ast$ \mbox{\hyperlink{class_level_manager_a32f274c7e03b55fbd18320976b53264a}{get\+Level\+By\+Name}} (std\+::string \mbox{\hyperlink{_s_d_l__opengl__glext_8h_aaced7cfc21e7d37775d6921bb8177239}{name}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_level_manager_a14c63e264f7faf9f086b977283d9d56f}{load\+Level}} (std\+::string \mbox{\hyperlink{_s_d_l__opengl__glext_8h_aaced7cfc21e7d37775d6921bb8177239}{name}})
+\item 
+\mbox{\hyperlink{class_level}{Level}} $\ast$ \mbox{\hyperlink{class_level_manager_a9b033d59ba9148e8be44d69357202511}{get\+Used\+Level}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_level_manager_a1be7c3303f0bd8aeebe3e35f8ee6598f}{get\+Level\+Name}} ()
+\item 
+\mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_level_manager_a200d54f74430af7b7b4db3cc2e361a05}{resolve\+Level}} (\mbox{\hyperlink{class_position}{Position}} pos, int player\+\_\+size)
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_level_manager_a4861d427b9aefe85aac767773da83bae}{delete\+Enemy}} (\mbox{\hyperlink{class_enemy}{Enemy}} $\ast$enemy)
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_level_manager_a86e72af91f1e738f5be4513fc3411655}{delete\+Collectible}} (\mbox{\hyperlink{class_collectible}{Collectible}} $\ast$collectible)
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_level_manager_a320a552bb266a33b85d8271fbd687d87}{generate\+Vertical\+Line}} (\mbox{\hyperlink{class_level}{Level}} $\ast$\mbox{\hyperlink{_s_d_l__opengl_8h_a2b536fca24f51d6a849aed325793e661}{level}}, \mbox{\hyperlink{class_position}{Position}} pos, int ammout, int entity\+\_\+size, \mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a8f486379aef534669f4f06f515e7ce6c}{texture}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_level_manager_a375603c1156728b09e1d7826911f4500}{generate\+Horizontal\+Line}} (\mbox{\hyperlink{class_level}{Level}} $\ast$\mbox{\hyperlink{_s_d_l__opengl_8h_a2b536fca24f51d6a849aed325793e661}{level}}, \mbox{\hyperlink{class_position}{Position}} pos, int ammount, int entity\+\_\+size, \mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a8f486379aef534669f4f06f515e7ce6c}{texture}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_level_manager_a1fd8f13474f754eafdc71ced154629a1}{generate\+Ground}} (\mbox{\hyperlink{class_level}{Level}} $\ast$\mbox{\hyperlink{_s_d_l__opengl_8h_a2b536fca24f51d6a849aed325793e661}{level}}, int \mbox{\hyperlink{_s_d_l__opengl_8h_a1675d9d7bb68e1657ff028643b4037e3}{y}}, int entity\+\_\+size, \mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$grass\+\_\+texture, \mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$dirt\+\_\+texture)
+\item 
+int \mbox{\hyperlink{class_level_manager_a9d64e8414e56b39ab1384b9ccf185320}{get\+Collectibles}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_level_manager_a698b5e17670ebc60bb7c9a552a703461}\label{class_level_manager_a698b5e17670ebc60bb7c9a552a703461}} 
+\index{LevelManager@{LevelManager}!LevelManager@{LevelManager}}
+\index{LevelManager@{LevelManager}!LevelManager@{LevelManager}}
+\doxysubsubsection{\texorpdfstring{LevelManager()}{LevelManager()}}
+{\footnotesize\ttfamily Level\+Manager\+::\+Level\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_render_window}{Render\+Window}} \&}]{window,  }\item[{int}]{window\+\_\+width,  }\item[{int}]{window\+\_\+height }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_level_manager_a86e72af91f1e738f5be4513fc3411655}\label{class_level_manager_a86e72af91f1e738f5be4513fc3411655}} 
+\index{LevelManager@{LevelManager}!deleteCollectible@{deleteCollectible}}
+\index{deleteCollectible@{deleteCollectible}!LevelManager@{LevelManager}}
+\doxysubsubsection{\texorpdfstring{deleteCollectible()}{deleteCollectible()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Level\+Manager\+::delete\+Collectible (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collectible}{Collectible}} $\ast$}]{collectible }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_level_manager_a4861d427b9aefe85aac767773da83bae}\label{class_level_manager_a4861d427b9aefe85aac767773da83bae}} 
+\index{LevelManager@{LevelManager}!deleteEnemy@{deleteEnemy}}
+\index{deleteEnemy@{deleteEnemy}!LevelManager@{LevelManager}}
+\doxysubsubsection{\texorpdfstring{deleteEnemy()}{deleteEnemy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Level\+Manager\+::delete\+Enemy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_enemy}{Enemy}} $\ast$}]{enemy }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_level_manager_a1fd8f13474f754eafdc71ced154629a1}\label{class_level_manager_a1fd8f13474f754eafdc71ced154629a1}} 
+\index{LevelManager@{LevelManager}!generateGround@{generateGround}}
+\index{generateGround@{generateGround}!LevelManager@{LevelManager}}
+\doxysubsubsection{\texorpdfstring{generateGround()}{generateGround()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Level\+Manager\+::generate\+Ground (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_level}{Level}} $\ast$}]{level,  }\item[{int}]{y,  }\item[{int}]{entity\+\_\+size,  }\item[{\mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$}]{grass\+\_\+texture,  }\item[{\mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$}]{dirt\+\_\+texture }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_level_manager_a375603c1156728b09e1d7826911f4500}\label{class_level_manager_a375603c1156728b09e1d7826911f4500}} 
+\index{LevelManager@{LevelManager}!generateHorizontalLine@{generateHorizontalLine}}
+\index{generateHorizontalLine@{generateHorizontalLine}!LevelManager@{LevelManager}}
+\doxysubsubsection{\texorpdfstring{generateHorizontalLine()}{generateHorizontalLine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Level\+Manager\+::generate\+Horizontal\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_level}{Level}} $\ast$}]{level,  }\item[{\mbox{\hyperlink{class_position}{Position}}}]{pos,  }\item[{int}]{ammount,  }\item[{int}]{entity\+\_\+size,  }\item[{\mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$}]{texture }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_level_manager_a320a552bb266a33b85d8271fbd687d87}\label{class_level_manager_a320a552bb266a33b85d8271fbd687d87}} 
+\index{LevelManager@{LevelManager}!generateVerticalLine@{generateVerticalLine}}
+\index{generateVerticalLine@{generateVerticalLine}!LevelManager@{LevelManager}}
+\doxysubsubsection{\texorpdfstring{generateVerticalLine()}{generateVerticalLine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Level\+Manager\+::generate\+Vertical\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_level}{Level}} $\ast$}]{level,  }\item[{\mbox{\hyperlink{class_position}{Position}}}]{pos,  }\item[{int}]{ammout,  }\item[{int}]{entity\+\_\+size,  }\item[{\mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$}]{texture }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_level_manager_a9d64e8414e56b39ab1384b9ccf185320}\label{class_level_manager_a9d64e8414e56b39ab1384b9ccf185320}} 
+\index{LevelManager@{LevelManager}!getCollectibles@{getCollectibles}}
+\index{getCollectibles@{getCollectibles}!LevelManager@{LevelManager}}
+\doxysubsubsection{\texorpdfstring{getCollectibles()}{getCollectibles()}}
+{\footnotesize\ttfamily int Level\+Manager\+::get\+Collectibles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_level_manager_a32f274c7e03b55fbd18320976b53264a}\label{class_level_manager_a32f274c7e03b55fbd18320976b53264a}} 
+\index{LevelManager@{LevelManager}!getLevelByName@{getLevelByName}}
+\index{getLevelByName@{getLevelByName}!LevelManager@{LevelManager}}
+\doxysubsubsection{\texorpdfstring{getLevelByName()}{getLevelByName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_level}{Level}} $\ast$ Level\+Manager\+::get\+Level\+By\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_level_manager_a1be7c3303f0bd8aeebe3e35f8ee6598f}\label{class_level_manager_a1be7c3303f0bd8aeebe3e35f8ee6598f}} 
+\index{LevelManager@{LevelManager}!getLevelName@{getLevelName}}
+\index{getLevelName@{getLevelName}!LevelManager@{LevelManager}}
+\doxysubsubsection{\texorpdfstring{getLevelName()}{getLevelName()}}
+{\footnotesize\ttfamily std\+::string Level\+Manager\+::get\+Level\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_level_manager_a9b033d59ba9148e8be44d69357202511}\label{class_level_manager_a9b033d59ba9148e8be44d69357202511}} 
+\index{LevelManager@{LevelManager}!getUsedLevel@{getUsedLevel}}
+\index{getUsedLevel@{getUsedLevel}!LevelManager@{LevelManager}}
+\doxysubsubsection{\texorpdfstring{getUsedLevel()}{getUsedLevel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_level}{Level}} $\ast$ Level\+Manager\+::get\+Used\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_level_manager_a14c63e264f7faf9f086b977283d9d56f}\label{class_level_manager_a14c63e264f7faf9f086b977283d9d56f}} 
+\index{LevelManager@{LevelManager}!loadLevel@{loadLevel}}
+\index{loadLevel@{loadLevel}!LevelManager@{LevelManager}}
+\doxysubsubsection{\texorpdfstring{loadLevel()}{loadLevel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Level\+Manager\+::load\+Level (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_level_manager_a200d54f74430af7b7b4db3cc2e361a05}\label{class_level_manager_a200d54f74430af7b7b4db3cc2e361a05}} 
+\index{LevelManager@{LevelManager}!resolveLevel@{resolveLevel}}
+\index{resolveLevel@{resolveLevel}!LevelManager@{LevelManager}}
+\doxysubsubsection{\texorpdfstring{resolveLevel()}{resolveLevel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_position}{Position}} Level\+Manager\+::resolve\+Level (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}}}]{pos,  }\item[{int}]{player\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_level_manager_8hpp}{Level\+Manager.\+hpp}}\item 
+src/\mbox{\hyperlink{_level_manager_8cpp}{Level\+Manager.\+cpp}}\end{DoxyCompactItemize}

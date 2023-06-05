@@ -1,0 +1,155 @@
+\hypertarget{class_render_window}{}\doxysection{Render\+Window Class Reference}
+\label{class_render_window}\index{RenderWindow@{RenderWindow}}
+
+
+Klasa stanowiąca nakładkę na funkcjonalności biblioteki SDL2 służące do renderowania obiektów w oknie.  
+
+
+
+
+{\ttfamily \#include $<$Render\+Window.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_render_window_a5f27f9c5df33183e43724553d8152efe}{Render\+Window}} (const char $\ast$p\+\_\+title, int p\+\_\+w, int p\+\_\+h)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$ \mbox{\hyperlink{class_render_window_aaca0ba595c084fe57929d36dbfe65a89}{load\+Texture}} (const char $\ast$p\+\_\+file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Metoda służąca do wczytywania tekstur z podanej ścieżki. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_render_window_ad1cbf231edfb8e43e7a6f296e405b733}{handle\+Events}} (\mbox{\hyperlink{union_s_d_l___event}{SDL\+\_\+\+Event}} \&\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a03b04a5a978bad576866339075de01f6}{event}})
+\begin{DoxyCompactList}\small\item\em Metoda do obsługi danych wejścia od użytkownika, związanych z zamykaniem programu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_render_window_a5e1d7c6aa5ca4493a32f37364409c737}{clean\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Metoda czyszcząca pamięć o utworzonym dynamicznie obiekcie klasy SDL\+\_\+\+Window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_render_window_a004b769350e13e34ce9f8272c934e061}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Metoda czyszcząca okno / malująca je jednolitym kolorem. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_render_window_ac98290c5d347a9736b0f0c1bb1784a6f}{render}} (\mbox{\hyperlink{class_entity}{Entity}} \&p\+\_\+entity)
+\begin{DoxyCompactList}\small\item\em Metoda służąca do renderowania obiektu klasy \mbox{\hyperlink{class_entity}{Entity}} w oknie. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_render_window_aeb200551e92638a3b30863990d7b6577}{update}} ()
+\begin{DoxyCompactList}\small\item\em Metoda aktualizująca \char`\"{}klatkę\char`\"{}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_render_window_a0a5a55cd13440882f7bbf5d1354e6b0e}{is\+Open}} ()
+\begin{DoxyCompactList}\small\item\em Metoda informująca czy \mbox{\hyperlink{class_render_window}{Render\+Window}} ma ustawioną flagę is\+\_\+open na prawda. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa stanowiąca nakładkę na funkcjonalności biblioteki SDL2 służące do renderowania obiektów w oknie. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_render_window_a5f27f9c5df33183e43724553d8152efe}\label{class_render_window_a5f27f9c5df33183e43724553d8152efe}} 
+\index{RenderWindow@{RenderWindow}!RenderWindow@{RenderWindow}}
+\index{RenderWindow@{RenderWindow}!RenderWindow@{RenderWindow}}
+\doxysubsubsection{\texorpdfstring{RenderWindow()}{RenderWindow()}}
+{\footnotesize\ttfamily Render\+Window\+::\+Render\+Window (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+\_\+title,  }\item[{int}]{p\+\_\+w,  }\item[{int}]{p\+\_\+h }\end{DoxyParamCaption})}
+
+
+
+Konstruktor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+title} & Tekst, który będzie się wyświetlał na pasku okna. \\
+\hline
+{\em p\+\_\+w} & Szerokość okna podana w pikselach. \\
+\hline
+{\em p\+\_\+h} & Wysokość okna podana w pikselach. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_render_window_a5e1d7c6aa5ca4493a32f37364409c737}\label{class_render_window_a5e1d7c6aa5ca4493a32f37364409c737}} 
+\index{RenderWindow@{RenderWindow}!cleanUp@{cleanUp}}
+\index{cleanUp@{cleanUp}!RenderWindow@{RenderWindow}}
+\doxysubsubsection{\texorpdfstring{cleanUp()}{cleanUp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Render\+Window\+::clean\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda czyszcząca pamięć o utworzonym dynamicznie obiekcie klasy SDL\+\_\+\+Window. 
+
+\mbox{\Hypertarget{class_render_window_a004b769350e13e34ce9f8272c934e061}\label{class_render_window_a004b769350e13e34ce9f8272c934e061}} 
+\index{RenderWindow@{RenderWindow}!clear@{clear}}
+\index{clear@{clear}!RenderWindow@{RenderWindow}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Render\+Window\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda czyszcząca okno / malująca je jednolitym kolorem. 
+
+\mbox{\Hypertarget{class_render_window_ad1cbf231edfb8e43e7a6f296e405b733}\label{class_render_window_ad1cbf231edfb8e43e7a6f296e405b733}} 
+\index{RenderWindow@{RenderWindow}!handleEvents@{handleEvents}}
+\index{handleEvents@{handleEvents}!RenderWindow@{RenderWindow}}
+\doxysubsubsection{\texorpdfstring{handleEvents()}{handleEvents()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Render\+Window\+::handle\+Events (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{union_s_d_l___event}{SDL\+\_\+\+Event}} \&}]{event }\end{DoxyParamCaption})}
+
+
+
+Metoda do obsługi danych wejścia od użytkownika, związanych z zamykaniem programu. 
+
+Ustawi flagę is\+\_\+bool na false w momencie kliknięcia X w celu zamknięcia okna lub klawisza ESCAPE. 
+\begin{DoxyParams}{Parameters}
+{\em event} & Struktura \mbox{\hyperlink{union_s_d_l___event}{SDL\+\_\+\+Event}} zawierająca informacje o wydarzeniach. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_render_window_a0a5a55cd13440882f7bbf5d1354e6b0e}\label{class_render_window_a0a5a55cd13440882f7bbf5d1354e6b0e}} 
+\index{RenderWindow@{RenderWindow}!isOpen@{isOpen}}
+\index{isOpen@{isOpen}!RenderWindow@{RenderWindow}}
+\doxysubsubsection{\texorpdfstring{isOpen()}{isOpen()}}
+{\footnotesize\ttfamily bool Render\+Window\+::is\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda informująca czy \mbox{\hyperlink{class_render_window}{Render\+Window}} ma ustawioną flagę is\+\_\+open na prawda. 
+
+\begin{DoxyReturn}{Returns}
+true jeśli nie podjęto próby zamknięcia okna, false gdy wciśnięto klawisz ESCAPE lub X. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_render_window_aaca0ba595c084fe57929d36dbfe65a89}\label{class_render_window_aaca0ba595c084fe57929d36dbfe65a89}} 
+\index{RenderWindow@{RenderWindow}!loadTexture@{loadTexture}}
+\index{loadTexture@{loadTexture}!RenderWindow@{RenderWindow}}
+\doxysubsubsection{\texorpdfstring{loadTexture()}{loadTexture()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$ Render\+Window\+::load\+Texture (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+\_\+file\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Metoda służąca do wczytywania tekstur z podanej ścieżki. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+file\+\_\+path} & Ścieżka relatywna lub absolutna do wczytywanej tekstury. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wskaźnik na obiekt klasy SDL\+\_\+\+Texture. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_render_window_ac98290c5d347a9736b0f0c1bb1784a6f}\label{class_render_window_ac98290c5d347a9736b0f0c1bb1784a6f}} 
+\index{RenderWindow@{RenderWindow}!render@{render}}
+\index{render@{render}!RenderWindow@{RenderWindow}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Render\+Window\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_entity}{Entity}} \&}]{p\+\_\+entity }\end{DoxyParamCaption})}
+
+
+
+Metoda służąca do renderowania obiektu klasy \mbox{\hyperlink{class_entity}{Entity}} w oknie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+entity} & Obiekt klasy \mbox{\hyperlink{class_entity}{Entity}} do renderowania w oknie. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_render_window_aeb200551e92638a3b30863990d7b6577}\label{class_render_window_aeb200551e92638a3b30863990d7b6577}} 
+\index{RenderWindow@{RenderWindow}!update@{update}}
+\index{update@{update}!RenderWindow@{RenderWindow}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Render\+Window\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metoda aktualizująca \char`\"{}klatkę\char`\"{}. 
+
+Konieczna do wywołania po każdej zmianie obrazu. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_render_window_8hpp}{Render\+Window.\+hpp}}\item 
+src/\mbox{\hyperlink{_render_window_8cpp}{Render\+Window.\+cpp}}\end{DoxyCompactItemize}

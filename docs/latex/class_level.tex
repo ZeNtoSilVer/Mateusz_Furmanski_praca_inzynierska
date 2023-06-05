@@ -1,0 +1,165 @@
+\hypertarget{class_level}{}\doxysection{Level Class Reference}
+\label{class_level}\index{Level@{Level}}
+
+
+{\ttfamily \#include $<$Level.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_level_aae1f9a0a4a36455ca64f6a0884d9a494}{Level}} (std\+::string \mbox{\hyperlink{_s_d_l__opengl__glext_8h_aaced7cfc21e7d37775d6921bb8177239}{name}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_level_a59f00cc3b03ea9862e0d8c9a039506be}{create\+Entity}} (\mbox{\hyperlink{class_position}{Position}} p\+\_\+pos, \mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$p\+\_\+tex, int \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_level_ad79701e19397c322191cc654199d45d2}{create\+Enemy}} (\mbox{\hyperlink{class_position}{Position}} p\+\_\+pos, \mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$p\+\_\+tex, int \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}}, int window\+\_\+width, int window\+\_\+height)
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_level_ad173c8355da8cae686bcfcac0e9d3cc2}{delete\+Enemy}} (\mbox{\hyperlink{class_enemy}{Enemy}} $\ast$enemy)
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_level_a0e3c9905e854915e1db6d01da617edc6}{create\+Collectible}} (\mbox{\hyperlink{class_position}{Position}} p\+\_\+pos, \mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$p\+\_\+tex, int \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_level_a395ad3dfec7af00063fd8b30cd354eac}{delete\+Collectible}} (\mbox{\hyperlink{class_collectible}{Collectible}} $\ast$collectible)
+\item 
+std\+::string \mbox{\hyperlink{class_level_ad8d712b35c26e444191ebef93d84a05f}{get\+Name}} ()
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_entity}{Entity}} $\ast$ $>$ \mbox{\hyperlink{class_level_adc3b4562508aac43e0f66af7368ad621}{get\+Entities}} ()
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_enemy}{Enemy}} $\ast$ $>$ \mbox{\hyperlink{class_level_a760e00718aff534a4606b206bd293af3}{get\+Enemies}} ()
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_collectible}{Collectible}} $\ast$ $>$ \mbox{\hyperlink{class_level_a97621d6c6fe6043dff1459764172aa65}{get\+Collectibles}} ()
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_level_aab1856413f61864618e442a9b7363e5f}{set\+Level\+To\+The\+Left}} (std\+::string \mbox{\hyperlink{_s_d_l__opengl__glext_8h_aaced7cfc21e7d37775d6921bb8177239}{name}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_level_a21893818f6791a5009e153208794cc37}{set\+Level\+To\+The\+Right}} (std\+::string \mbox{\hyperlink{_s_d_l__opengl__glext_8h_aaced7cfc21e7d37775d6921bb8177239}{name}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_level_a6bd7a9761bcdc15dbef4ce936a1f8578}{set\+Level\+Under}} (std\+::string \mbox{\hyperlink{_s_d_l__opengl__glext_8h_aaced7cfc21e7d37775d6921bb8177239}{name}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_level_a49184bc72205f26340acf60f32c43eac}{set\+Level\+Above}} (std\+::string \mbox{\hyperlink{_s_d_l__opengl__glext_8h_aaced7cfc21e7d37775d6921bb8177239}{name}})
+\item 
+std\+::string \mbox{\hyperlink{class_level_aca2f03879033a03189cbc86aa288dc05}{get\+Level\+To\+The\+Left}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_level_a0e25060718537eb9d347b92fa2e648cb}{get\+Level\+To\+The\+Right}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_level_a76ec9f5dc9ff326a4ae005a90f50ae47}{get\+Level\+Under}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_level_a4a99197c828eaee9f89dd2b848165b71}{get\+Level\+Above}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_level_aae1f9a0a4a36455ca64f6a0884d9a494}\label{class_level_aae1f9a0a4a36455ca64f6a0884d9a494}} 
+\index{Level@{Level}!Level@{Level}}
+\index{Level@{Level}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{Level()}{Level()}}
+{\footnotesize\ttfamily Level\+::\+Level (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_level_a0e3c9905e854915e1db6d01da617edc6}\label{class_level_a0e3c9905e854915e1db6d01da617edc6}} 
+\index{Level@{Level}!createCollectible@{createCollectible}}
+\index{createCollectible@{createCollectible}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{createCollectible()}{createCollectible()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Level\+::create\+Collectible (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}}}]{p\+\_\+pos,  }\item[{\mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$}]{p\+\_\+tex,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_level_ad79701e19397c322191cc654199d45d2}\label{class_level_ad79701e19397c322191cc654199d45d2}} 
+\index{Level@{Level}!createEnemy@{createEnemy}}
+\index{createEnemy@{createEnemy}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{createEnemy()}{createEnemy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Level\+::create\+Enemy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}}}]{p\+\_\+pos,  }\item[{\mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$}]{p\+\_\+tex,  }\item[{int}]{size,  }\item[{int}]{window\+\_\+width,  }\item[{int}]{window\+\_\+height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_level_a59f00cc3b03ea9862e0d8c9a039506be}\label{class_level_a59f00cc3b03ea9862e0d8c9a039506be}} 
+\index{Level@{Level}!createEntity@{createEntity}}
+\index{createEntity@{createEntity}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{createEntity()}{createEntity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Level\+::create\+Entity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}}}]{p\+\_\+pos,  }\item[{\mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$}]{p\+\_\+tex,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_level_a395ad3dfec7af00063fd8b30cd354eac}\label{class_level_a395ad3dfec7af00063fd8b30cd354eac}} 
+\index{Level@{Level}!deleteCollectible@{deleteCollectible}}
+\index{deleteCollectible@{deleteCollectible}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{deleteCollectible()}{deleteCollectible()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Level\+::delete\+Collectible (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collectible}{Collectible}} $\ast$}]{collectible }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_level_ad173c8355da8cae686bcfcac0e9d3cc2}\label{class_level_ad173c8355da8cae686bcfcac0e9d3cc2}} 
+\index{Level@{Level}!deleteEnemy@{deleteEnemy}}
+\index{deleteEnemy@{deleteEnemy}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{deleteEnemy()}{deleteEnemy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Level\+::delete\+Enemy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_enemy}{Enemy}} $\ast$}]{enemy }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_level_a97621d6c6fe6043dff1459764172aa65}\label{class_level_a97621d6c6fe6043dff1459764172aa65}} 
+\index{Level@{Level}!getCollectibles@{getCollectibles}}
+\index{getCollectibles@{getCollectibles}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{getCollectibles()}{getCollectibles()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_collectible}{Collectible}} $\ast$ $>$ Level\+::get\+Collectibles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_level_a760e00718aff534a4606b206bd293af3}\label{class_level_a760e00718aff534a4606b206bd293af3}} 
+\index{Level@{Level}!getEnemies@{getEnemies}}
+\index{getEnemies@{getEnemies}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{getEnemies()}{getEnemies()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_enemy}{Enemy}} $\ast$ $>$ Level\+::get\+Enemies (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_level_adc3b4562508aac43e0f66af7368ad621}\label{class_level_adc3b4562508aac43e0f66af7368ad621}} 
+\index{Level@{Level}!getEntities@{getEntities}}
+\index{getEntities@{getEntities}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{getEntities()}{getEntities()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_entity}{Entity}} $\ast$ $>$ Level\+::get\+Entities (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_level_a4a99197c828eaee9f89dd2b848165b71}\label{class_level_a4a99197c828eaee9f89dd2b848165b71}} 
+\index{Level@{Level}!getLevelAbove@{getLevelAbove}}
+\index{getLevelAbove@{getLevelAbove}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{getLevelAbove()}{getLevelAbove()}}
+{\footnotesize\ttfamily std\+::string Level\+::get\+Level\+Above (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_level_aca2f03879033a03189cbc86aa288dc05}\label{class_level_aca2f03879033a03189cbc86aa288dc05}} 
+\index{Level@{Level}!getLevelToTheLeft@{getLevelToTheLeft}}
+\index{getLevelToTheLeft@{getLevelToTheLeft}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{getLevelToTheLeft()}{getLevelToTheLeft()}}
+{\footnotesize\ttfamily std\+::string Level\+::get\+Level\+To\+The\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_level_a0e25060718537eb9d347b92fa2e648cb}\label{class_level_a0e25060718537eb9d347b92fa2e648cb}} 
+\index{Level@{Level}!getLevelToTheRight@{getLevelToTheRight}}
+\index{getLevelToTheRight@{getLevelToTheRight}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{getLevelToTheRight()}{getLevelToTheRight()}}
+{\footnotesize\ttfamily std\+::string Level\+::get\+Level\+To\+The\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_level_a76ec9f5dc9ff326a4ae005a90f50ae47}\label{class_level_a76ec9f5dc9ff326a4ae005a90f50ae47}} 
+\index{Level@{Level}!getLevelUnder@{getLevelUnder}}
+\index{getLevelUnder@{getLevelUnder}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{getLevelUnder()}{getLevelUnder()}}
+{\footnotesize\ttfamily std\+::string Level\+::get\+Level\+Under (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_level_ad8d712b35c26e444191ebef93d84a05f}\label{class_level_ad8d712b35c26e444191ebef93d84a05f}} 
+\index{Level@{Level}!getName@{getName}}
+\index{getName@{getName}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Level\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_level_a49184bc72205f26340acf60f32c43eac}\label{class_level_a49184bc72205f26340acf60f32c43eac}} 
+\index{Level@{Level}!setLevelAbove@{setLevelAbove}}
+\index{setLevelAbove@{setLevelAbove}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{setLevelAbove()}{setLevelAbove()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Level\+::set\+Level\+Above (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_level_aab1856413f61864618e442a9b7363e5f}\label{class_level_aab1856413f61864618e442a9b7363e5f}} 
+\index{Level@{Level}!setLevelToTheLeft@{setLevelToTheLeft}}
+\index{setLevelToTheLeft@{setLevelToTheLeft}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{setLevelToTheLeft()}{setLevelToTheLeft()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Level\+::set\+Level\+To\+The\+Left (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_level_a21893818f6791a5009e153208794cc37}\label{class_level_a21893818f6791a5009e153208794cc37}} 
+\index{Level@{Level}!setLevelToTheRight@{setLevelToTheRight}}
+\index{setLevelToTheRight@{setLevelToTheRight}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{setLevelToTheRight()}{setLevelToTheRight()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Level\+::set\+Level\+To\+The\+Right (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_level_a6bd7a9761bcdc15dbef4ce936a1f8578}\label{class_level_a6bd7a9761bcdc15dbef4ce936a1f8578}} 
+\index{Level@{Level}!setLevelUnder@{setLevelUnder}}
+\index{setLevelUnder@{setLevelUnder}!Level@{Level}}
+\doxysubsubsection{\texorpdfstring{setLevelUnder()}{setLevelUnder()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Level\+::set\+Level\+Under (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_level_8hpp}{Level.\+hpp}}\item 
+src/\mbox{\hyperlink{_level_8cpp}{Level.\+cpp}}\end{DoxyCompactItemize}

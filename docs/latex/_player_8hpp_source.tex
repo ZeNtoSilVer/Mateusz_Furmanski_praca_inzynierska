@@ -1,0 +1,38 @@
+\hypertarget{_player_8hpp_source}{}\doxysection{Player.\+hpp}
+\label{_player_8hpp_source}\index{include/Player.hpp@{include/Player.hpp}}
+\mbox{\hyperlink{_player_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_movable_8hpp}{Movable.hpp}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_level_manager_8hpp}{LevelManager.hpp}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_bullet_8hpp}{Bullet.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player}{Player}}\ :\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_movable}{Movable}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}(\mbox{\hyperlink{class_position}{Position}}\ p\_pos,\ \mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\_Texture}}\ *p\_tex,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_player_a8b4b2cea0c16669c309d27189b6da659}{window\_width}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_player_aed5b50e792e0bacd8988d6fc9626a299}{window\_height}});}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_a1cb7ff18fe3b07cc1dcd27519bde8329}{updatePosition}}();}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_a136c4e98f9233f25db84f2dfe028cf41}{decreaseSpeed}}();}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_ad7d10124ba43a5d163e68dd1e1ac850f}{move}}(\textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aaadb45120aafd37a973140edee24708065}{LEFT}},\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aaaec8379af7490bb9eaaf579cf17876f38}{RIGHT}},\ \mbox{\hyperlink{class_level_manager}{LevelManager}}\&\ l\_manager);}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_a494ffcf413795c08d8b81bbf5f036a8a}{jump}}(\mbox{\hyperlink{class_level_manager}{LevelManager}}\&\ l\_manager);}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_a1f0aeea114080c776ea91b569c478e31}{addBullet}}(\mbox{\hyperlink{class_bullet}{Bullet}}*\ bullet);}
+\DoxyCodeLine{00016\ \ \ \ \ std::vector<Bullet*>\ \mbox{\hyperlink{class_player_a387006e0389129033279784fc9ae0041}{getBullets}}();}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_ac00596583d8e9289a10abb58dab316eb}{shoot}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__opengl_8h_a1675d9d7bb68e1657ff028643b4037e3}{y}});}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_acd7e7c531820fe1b2b34484c213f730b}{handleActions}}(\mbox{\hyperlink{union_s_d_l___event}{SDL\_Event}}\ \&\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a03b04a5a978bad576866339075de01f6}{event}},\ \mbox{\hyperlink{class_level_manager}{LevelManager}}\&\ l\_manager);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_a31fbec523b845592afd9ed0c60f0ffb4}{handleMovement}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8}}\ *keyboard\_state,\ \mbox{\hyperlink{class_level_manager}{LevelManager}}\&\ l\_manager);}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_enemy}{Enemy}}*\ \mbox{\hyperlink{class_player_a9eac08b7eb7626a1ee61c064e576ffcd}{willCollideWithAny}}(\mbox{\hyperlink{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ direction,\ std::vector<Enemy*>\ enemies);}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_collectible}{Collectible}}*\ \mbox{\hyperlink{class_player_a9eac08b7eb7626a1ee61c064e576ffcd}{willCollideWithAny}}(\mbox{\hyperlink{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ direction,\ std::vector<Collectible*>\ \mbox{\hyperlink{class_player_af4e1ff87c318437e75843b86dd8478fa}{collectibles}});}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_player_a06e38c0f57e67eb006c9d09779bd8f8f}{isAlive}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_a1e4b3e6ef91fc400ff2c6c26b1370f8c}{die}}();}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_a6c29b94c9e168173e24053a029b68cb5}{collect}}(\mbox{\hyperlink{class_collectible}{Collectible}}*\ collectible);}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_player_afe9bfdc5d0fe551558c3c301d401984f}{canFinish}}(\textcolor{keywordtype}{int}\ collectibles\_to\_finish);}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ private:}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_player_a6fe4aafe4f20432b7e7e89863e45dc61}{accel\_max}}\ =\ 5;}
+\DoxyCodeLine{00028\ \ \ \ \ std::vector<Bullet*>\ \mbox{\hyperlink{class_player_a894a5a99eceaa634d5746f3282048ed3}{bullets}};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_player_a8b4b2cea0c16669c309d27189b6da659}{window\_width}};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_player_aed5b50e792e0bacd8988d6fc9626a299}{window\_height}};}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_player_af4e1ff87c318437e75843b86dd8478fa}{collectibles}}\ =\ 0;}
+\DoxyCodeLine{00032\ \};}
+
+\end{DoxyCode}

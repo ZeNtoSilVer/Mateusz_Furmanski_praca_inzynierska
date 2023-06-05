@@ -1,0 +1,245 @@
+\hypertarget{_s_d_l__surface_8h_source}{}\doxysection{SDL\+\_\+surface.\+h}
+\label{_s_d_l__surface_8h_source}\index{include/SDL2/SDL\_surface.h@{include/SDL2/SDL\_surface.h}}
+\mbox{\hyperlink{_s_d_l__surface_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ \ Simple\ DirectMedia\ Layer}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ Copyright\ (C)\ 1997-\/2022\ Sam\ Lantinga\ <slouken@libsdl.org>}}
+\DoxyCodeLine{00004\ \textcolor{comment}{}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ This\ software\ is\ provided\ 'as-\/is',\ without\ any\ express\ or\ implied}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ warranty.\ \ In\ no\ event\ will\ the\ authors\ be\ held\ liable\ for\ any\ damages}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ \ arising\ from\ the\ use\ of\ this\ software.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ \ Permission\ is\ granted\ to\ anyone\ to\ use\ this\ software\ for\ any\ purpose,}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ including\ commercial\ applications,\ and\ to\ alter\ it\ and\ redistribute\ it}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ freely,\ subject\ to\ the\ following\ restrictions:}}
+\DoxyCodeLine{00012\ \textcolor{comment}{}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ 1.\ The\ origin\ of\ this\ software\ must\ not\ be\ misrepresented;\ you\ must\ not}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ \ claim\ that\ you\ wrote\ the\ original\ software.\ If\ you\ use\ this\ software}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ \ in\ a\ product,\ an\ acknowledgment\ in\ the\ product\ documentation\ would\ be}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ \ appreciated\ but\ is\ not\ required.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ \ 2.\ Altered\ source\ versions\ must\ be\ plainly\ marked\ as\ such,\ and\ must\ not\ be}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ \ misrepresented\ as\ being\ the\ original\ software.}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ 3.\ This\ notice\ may\ not\ be\ removed\ or\ altered\ from\ any\ source\ distribution.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#ifndef\ SDL\_surface\_h\_}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ SDL\_surface\_h\_}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_s_d_l__stdinc_8h}{SDL\_stdinc.h}}"{}}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_s_d_l__pixels_8h}{SDL\_pixels.h}}"{}}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_s_d_l__rect_8h}{SDL\_rect.h}}"{}}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_s_d_l__blendmode_8h}{SDL\_blendmode.h}}"{}}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_s_d_l__rwops_8h}{SDL\_rwops.h}}"{}}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{begin__code_8h}{begin\_code.h}}"{}}}
+\DoxyCodeLine{00038\ \textcolor{comment}{/*\ Set\ up\ for\ C\ function\ definitions,\ even\ when\ using\ C++\ */}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00040\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00051\ \textcolor{comment}{/*\ @\{\ */}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ SDL\_SWSURFACE\ \ \ \ \ \ \ 0\ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ SDL\_PREALLOC\ \ \ \ \ \ \ \ 0x00000001\ \ }}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ SDL\_RLEACCEL\ \ \ \ \ \ \ \ 0x00000002\ \ }}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ SDL\_DONTFREE\ \ \ \ \ \ \ \ 0x00000004\ \ }}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ SDL\_SIMD\_ALIGNED\ \ \ \ 0x00000008\ \ }}
+\DoxyCodeLine{00057\ \textcolor{comment}{/*\ @\}\ */}\textcolor{comment}{/*\ Surface\ flags\ */}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ SDL\_MUSTLOCK(S)\ (((S)-\/>flags\ \&\ SDL\_RLEACCEL)\ !=\ 0)}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}}
+\DoxyCodeLine{00071\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}\ \mbox{\hyperlink{struct_s_d_l___surface_a86d78b665d5dfd7aa1dd9696b067641b}{flags}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{struct_s_d_l___pixel_format}{SDL\_PixelFormat}}\ *\mbox{\hyperlink{struct_s_d_l___surface_a0a90721f947c10c3b79e02ccb419ca62}{format}};\ \ \ \ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_s_d_l___surface_a9b0ec7185dcdb2a3530a9160a6ea83d9}{w}},\ \mbox{\hyperlink{struct_s_d_l___surface_af33bcf87a1f5e10a99b3c7e8626b38c8}{h}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_s_d_l___surface_a5fa37325d77d65b2ed64ffc7cd01bb6c}{pitch}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{struct_s_d_l___surface_abd9597e0e084b8ef33fe0397bc26d911}{pixels}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{struct_s_d_l___surface_ae66d973dcb9b57cb34815892e1ee1f31}{userdata}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_s_d_l___surface_a5022edaeea1c0a055fa5d6dccba41de2}{locked}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{struct_s_d_l___surface_a17294cb1ec1ef7f77f75cdad26ac795f}{list\_blitmap}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{struct_s_d_l___rect}{SDL\_Rect}}\ \mbox{\hyperlink{struct_s_d_l___surface_aa9a0da3b38261dad6cf0cc4e3bb5b0c3}{clip\_rect}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{struct\ }SDL\_BlitMap\ *\mbox{\hyperlink{struct_s_d_l___surface_a8c1ecad399b0d4f525b1a53b6ee9393f}{map}};\ \ \ \ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_s_d_l___surface_a03d10628a359c0674f5ceffd574f1641}{refcount}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00095\ \}\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00100\ \textcolor{keyword}{typedef}\ int\ (\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ *\mbox{\hyperlink{_s_d_l__surface_8h_ab2d7366d99a08693d476b98760690947}{SDL\_blit}})\ (\textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a72e0fdf0f845ded60b1fada9e9195cd7}{src}},\ \mbox{\hyperlink{struct_s_d_l___rect}{SDL\_Rect}}\ *\ srcrect,}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a92034251bfd455d524a9b5610cddba00}{dst}},\ \mbox{\hyperlink{struct_s_d_l___rect}{SDL\_Rect}}\ *\ dstrect);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00106\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00107\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \mbox{\hyperlink{_s_d_l__surface_8h_a00a564600207cec7a2cb50a6e20d2446a779237ffb78ee935518b83e8ab8a35dc}{SDL\_YUV\_CONVERSION\_JPEG}},\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00109\ \ \ \ \ \mbox{\hyperlink{_s_d_l__surface_8h_a00a564600207cec7a2cb50a6e20d2446a58058f0ed3146de73b031e256aa2aaaa}{SDL\_YUV\_CONVERSION\_BT601}},\ \ \ \ \ \ \ }
+\DoxyCodeLine{00110\ \ \ \ \ \mbox{\hyperlink{_s_d_l__surface_8h_a00a564600207cec7a2cb50a6e20d2446a806aeb86ff618a298206cbf921c0202a}{SDL\_YUV\_CONVERSION\_BT709}},\ \ \ \ \ \ \ }
+\DoxyCodeLine{00111\ \ \ \ \ \mbox{\hyperlink{_s_d_l__surface_8h_a00a564600207cec7a2cb50a6e20d2446acbf0cb1b718195c6c0960d4471a5ed0a}{SDL\_YUV\_CONVERSION\_AUTOMATIC}}\ \ \ \ }
+\DoxyCodeLine{00112\ \}\ \mbox{\hyperlink{_s_d_l__surface_8h_a00a564600207cec7a2cb50a6e20d2446}{SDL\_YUV\_CONVERSION\_MODE}};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00158\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a46e9fd3961922c6888a19b0462a75b24}{SDL\_CreateRGBSurface}}}
+\DoxyCodeLine{00159\ \ \ \ \ (\mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_ac7ba7d3cce3d19ca020e056b37231289}{flags}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__opengl_8h_a9a82cf3caff84cabc4598e2619faac17}{width}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__opengl_8h_aa352f2804b9902ac30769c00dde75d5f}{height}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__opengl_8h_aa8bd8cf1eef34712fdb6ad58b540a2ee}{depth}},}
+\DoxyCodeLine{00160\ \ \ \ \ \ \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}\ Rmask,\ \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}\ Gmask,\ \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}\ Bmask,\ \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}\ Amask);}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \textcolor{comment}{/*\ !!!\ FIXME\ for\ 2.1:\ why\ does\ this\ ask\ for\ depth?\ Format\ provides\ that.\ */}}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00186\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a9a981370beff567b9c7fbf888e272d8f}{SDL\_CreateRGBSurfaceWithFormat}}}
+\DoxyCodeLine{00187\ \ \ \ \ (\mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_ac7ba7d3cce3d19ca020e056b37231289}{flags}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__opengl_8h_a9a82cf3caff84cabc4598e2619faac17}{width}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__opengl_8h_aa352f2804b9902ac30769c00dde75d5f}{height}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__opengl_8h_aa8bd8cf1eef34712fdb6ad58b540a2ee}{depth}},\ \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}\ \mbox{\hyperlink{_s_d_l__opengl_8h_a71a65ffd977afe9c3fef116a5bc9ee27}{format}});}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00217\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a6487ace22fb07cc55785bc3be9489835}{SDL\_CreateRGBSurfaceFrom}}(\textcolor{keywordtype}{void}\ *\mbox{\hyperlink{_s_d_l__opengl_8h_ada7ad693ea2e311b8103f4693fc35f80}{pixels}},}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__opengl_8h_a9a82cf3caff84cabc4598e2619faac17}{width}},}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__opengl_8h_aa352f2804b9902ac30769c00dde75d5f}{height}},}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__opengl_8h_aa8bd8cf1eef34712fdb6ad58b540a2ee}{depth}},}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_s_d_l___surface_a5fa37325d77d65b2ed64ffc7cd01bb6c}{pitch}},}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}\ Rmask,}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}\ Gmask,}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}\ Bmask,}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}\ Amask);}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00227\ \textcolor{comment}{/*\ !!!\ FIXME\ for\ 2.1:\ why\ does\ this\ ask\ for\ depth?\ Format\ provides\ that.\ */}}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00255\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_af29df8bb7f57912211f5b6af199dcdc3}{SDL\_CreateRGBSurfaceWithFormatFrom}}}
+\DoxyCodeLine{00256\ \ \ \ \ (\textcolor{keywordtype}{void}\ *\mbox{\hyperlink{_s_d_l__opengl_8h_ada7ad693ea2e311b8103f4693fc35f80}{pixels}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__opengl_8h_a9a82cf3caff84cabc4598e2619faac17}{width}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__opengl_8h_aa352f2804b9902ac30769c00dde75d5f}{height}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__opengl_8h_aa8bd8cf1eef34712fdb6ad58b540a2ee}{depth}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_s_d_l___surface_a5fa37325d77d65b2ed64ffc7cd01bb6c}{pitch}},\ \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}\ \mbox{\hyperlink{_s_d_l__opengl_8h_a71a65ffd977afe9c3fef116a5bc9ee27}{format}});}
+\DoxyCodeLine{00257\ }
+\DoxyCodeLine{00272\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a7b8d4f9cc058822501896a2eed81220e}{SDL\_FreeSurface}}(\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ surface);}
+\DoxyCodeLine{00273\ }
+\DoxyCodeLine{00286\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a72c780465293acb1f586995943422a17}{SDL\_SetSurfacePalette}}(\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ surface,}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_s_d_l___palette}{SDL\_Palette}}\ *\ palette);}
+\DoxyCodeLine{00288\ }
+\DoxyCodeLine{00310\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a3d1da1c7ecdaa461fac51a10785f5077}{SDL\_LockSurface}}(\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ surface);}
+\DoxyCodeLine{00311\ }
+\DoxyCodeLine{00321\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a56b93f51358b55d7fc213a3ba9b02c24}{SDL\_UnlockSurface}}(\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ surface);}
+\DoxyCodeLine{00322\ }
+\DoxyCodeLine{00345\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a30572a53ecbd5a2c260d9aafc464503c}{SDL\_LoadBMP\_RW}}(\mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\_RWops}}\ *\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a72e0fdf0f845ded60b1fada9e9195cd7}{src}},}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ freesrc);}
+\DoxyCodeLine{00347\ }
+\DoxyCodeLine{00353\ \textcolor{preprocessor}{\#define\ SDL\_LoadBMP(file)\ \ \ SDL\_LoadBMP\_RW(SDL\_RWFromFile(file,\ "{}rb"{}}),\ 1)}
+\DoxyCodeLine{00354\ }
+\DoxyCodeLine{00375\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_aadc126a4edeafb5033d5e942cf32db6a}{SDL\_SaveBMP\_RW}}}
+\DoxyCodeLine{00376\ \ \ \ \ (\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ surface,\ \mbox{\hyperlink{struct_s_d_l___r_wops}{SDL\_RWops}}\ *\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a92034251bfd455d524a9b5610cddba00}{dst}},\ \textcolor{keywordtype}{int}\ freedst);}
+\DoxyCodeLine{00377\ }
+\DoxyCodeLine{00383\ \textcolor{preprocessor}{\#define\ SDL\_SaveBMP(surface,\ file)\ \(\backslash\)}}
+\DoxyCodeLine{00384\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ SDL\_SaveBMP\_RW(surface,\ SDL\_RWFromFile(file,\ "{}wb"{}}),\ 1)}
+\DoxyCodeLine{00385\ }
+\DoxyCodeLine{00403\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_ae2f6d70b8071e83e0c84241dbdcd3a3b}{SDL\_SetSurfaceRLE}}(\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ surface,}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ flag);}
+\DoxyCodeLine{00405\ }
+\DoxyCodeLine{00418\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{SDL\_bool}}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_abdc58e9ce47e2693230a3a1389b1bfb6}{SDL\_HasSurfaceRLE}}(\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ surface);}
+\DoxyCodeLine{00419\ }
+\DoxyCodeLine{00444\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a4cbe831b210dc900cb93101352357b73}{SDL\_SetColorKey}}(\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ surface,}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ flag,\ \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}\ key);}
+\DoxyCodeLine{00446\ }
+\DoxyCodeLine{00460\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{SDL\_bool}}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a31ca900bd39b6805fc8586472be18c90}{SDL\_HasColorKey}}(\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ surface);}
+\DoxyCodeLine{00461\ }
+\DoxyCodeLine{00480\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a2ff80a244bad20f1c4fa85adf1e1deb9}{SDL\_GetColorKey}}(\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ surface,}
+\DoxyCodeLine{00481\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}\ *\ key);}
+\DoxyCodeLine{00482\ }
+\DoxyCodeLine{00504\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a4edf978396e3f562d43c672630e0ca71}{SDL\_SetSurfaceColorMod}}(\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ surface,}
+\DoxyCodeLine{00505\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8}}\ \mbox{\hyperlink{_s_d_l__opengl_8h_a42ce7cdc612e53abee15043f80220d97}{r}},\ \mbox{\hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8}}\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_acaceb3a655ff28b75259860bcb868f9f}{g}},\ \mbox{\hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8}}\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}});}
+\DoxyCodeLine{00506\ }
+\DoxyCodeLine{00507\ }
+\DoxyCodeLine{00523\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a5db1ae32b7884b598d86424e205c3a86}{SDL\_GetSurfaceColorMod}}(\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ surface,}
+\DoxyCodeLine{00524\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8}}\ *\ \mbox{\hyperlink{_s_d_l__opengl_8h_a42ce7cdc612e53abee15043f80220d97}{r}},\ \mbox{\hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8}}\ *\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_acaceb3a655ff28b75259860bcb868f9f}{g}},}
+\DoxyCodeLine{00525\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8}}\ *\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a0f71581a41fd2264c8944126dabbd010}{b}});}
+\DoxyCodeLine{00526\ }
+\DoxyCodeLine{00545\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a0035f0239f0588d16c57aff7672be174}{SDL\_SetSurfaceAlphaMod}}(\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ surface,}
+\DoxyCodeLine{00546\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8}}\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_ac03904b1f7e359bb2acf10a755e97c5a}{alpha}});}
+\DoxyCodeLine{00547\ }
+\DoxyCodeLine{00561\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a09a99bb24420857e85071e39607678f6}{SDL\_GetSurfaceAlphaMod}}(\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ surface,}
+\DoxyCodeLine{00562\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8}}\ *\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_ac03904b1f7e359bb2acf10a755e97c5a}{alpha}});}
+\DoxyCodeLine{00563\ }
+\DoxyCodeLine{00580\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a35f5b3b64c503c4a8da01566f62976a9}{SDL\_SetSurfaceBlendMode}}(\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ surface,}
+\DoxyCodeLine{00581\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1e}{SDL\_BlendMode}}\ blendMode);}
+\DoxyCodeLine{00582\ }
+\DoxyCodeLine{00595\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a95570c617879f45bf7e2e4d330534f6b}{SDL\_GetSurfaceBlendMode}}(\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ surface,}
+\DoxyCodeLine{00596\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_s_d_l__blendmode_8h_a850d3c67a878fd6698a1c8dbb1eabf1e}{SDL\_BlendMode}}\ *blendMode);}
+\DoxyCodeLine{00597\ }
+\DoxyCodeLine{00618\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \mbox{\hyperlink{_s_d_l__stdinc_8h_a8fca68df0f976765230fe589a7c7733b}{SDL\_bool}}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a6cf2c30be55f51fe9e4faf97e3f8d08b}{SDL\_SetClipRect}}(\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ surface,}
+\DoxyCodeLine{00619\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_s_d_l___rect}{SDL\_Rect}}\ *\ rect);}
+\DoxyCodeLine{00620\ }
+\DoxyCodeLine{00637\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a7d7f71b94748a1b0db3b5b769834ed27}{SDL\_GetClipRect}}(\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ surface,}
+\DoxyCodeLine{00638\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_s_d_l___rect}{SDL\_Rect}}\ *\ rect);}
+\DoxyCodeLine{00639\ }
+\DoxyCodeLine{00640\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00641\ \textcolor{comment}{\ *\ Creates\ a\ new\ surface\ identical\ to\ the\ existing\ surface.}}
+\DoxyCodeLine{00642\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00643\ \textcolor{comment}{\ *\ The\ returned\ surface\ should\ be\ freed\ with\ SDL\_FreeSurface().}}
+\DoxyCodeLine{00644\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00645\ \textcolor{comment}{\ *\ \(\backslash\)param\ surface\ the\ surface\ to\ duplicate.}}
+\DoxyCodeLine{00646\ \textcolor{comment}{\ *\ \(\backslash\)returns\ a\ copy\ of\ the\ surface,\ or\ NULL\ on\ failure;\ call\ SDL\_GetError()\ for}}
+\DoxyCodeLine{00647\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ more\ information.}}
+\DoxyCodeLine{00648\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00649\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a1702789e69f61f2ecc5ce848464533c5}{SDL\_DuplicateSurface}}(\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ surface);}
+\DoxyCodeLine{00650\ }
+\DoxyCodeLine{00673\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a5bcce95525131d59a3039994a5ebdc7e}{SDL\_ConvertSurface}}}
+\DoxyCodeLine{00674\ \ \ \ \ (\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a72e0fdf0f845ded60b1fada9e9195cd7}{src}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_s_d_l___pixel_format}{SDL\_PixelFormat}}\ *\ fmt,\ \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_ac7ba7d3cce3d19ca020e056b37231289}{flags}});}
+\DoxyCodeLine{00675\ }
+\DoxyCodeLine{00698\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a32edde1eab798bd958c09dd08135ca8a}{SDL\_ConvertSurfaceFormat}}}
+\DoxyCodeLine{00699\ \ \ \ \ (\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a72e0fdf0f845ded60b1fada9e9195cd7}{src}},\ \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}\ pixel\_format,\ \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_ac7ba7d3cce3d19ca020e056b37231289}{flags}});}
+\DoxyCodeLine{00700\ }
+\DoxyCodeLine{00717\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a339c5728a1181e2d6334ad07e1e84440}{SDL\_ConvertPixels}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__opengl_8h_a9a82cf3caff84cabc4598e2619faac17}{width}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__opengl_8h_aa352f2804b9902ac30769c00dde75d5f}{height}},}
+\DoxyCodeLine{00718\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}\ src\_format,}
+\DoxyCodeLine{00719\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a72e0fdf0f845ded60b1fada9e9195cd7}{src}},\ \textcolor{keywordtype}{int}\ src\_pitch,}
+\DoxyCodeLine{00720\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}\ dst\_format,}
+\DoxyCodeLine{00721\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a92034251bfd455d524a9b5610cddba00}{dst}},\ \textcolor{keywordtype}{int}\ dst\_pitch);}
+\DoxyCodeLine{00722\ }
+\DoxyCodeLine{00743\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_ab6af6b224b687e7c6413106b785743d3}{SDL\_PremultiplyAlpha}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__opengl_8h_a9a82cf3caff84cabc4598e2619faac17}{width}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__opengl_8h_aa352f2804b9902ac30769c00dde75d5f}{height}},}
+\DoxyCodeLine{00744\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}\ src\_format,}
+\DoxyCodeLine{00745\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a72e0fdf0f845ded60b1fada9e9195cd7}{src}},\ \textcolor{keywordtype}{int}\ src\_pitch,}
+\DoxyCodeLine{00746\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}\ dst\_format,}
+\DoxyCodeLine{00747\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ *\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a92034251bfd455d524a9b5610cddba00}{dst}},\ \textcolor{keywordtype}{int}\ dst\_pitch);}
+\DoxyCodeLine{00748\ }
+\DoxyCodeLine{00772\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a98b3595458c6271303d6470cb2b2c721}{SDL\_FillRect}}}
+\DoxyCodeLine{00773\ \ \ \ \ (\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a92034251bfd455d524a9b5610cddba00}{dst}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_s_d_l___rect}{SDL\_Rect}}\ *\ rect,\ \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3ea846f998d64f079b86052b6c4193a8}{color}});}
+\DoxyCodeLine{00774\ }
+\DoxyCodeLine{00798\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a7b893162f400b8193ff6ca628ec784b6}{SDL\_FillRects}}}
+\DoxyCodeLine{00799\ \ \ \ \ (\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a92034251bfd455d524a9b5610cddba00}{dst}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_s_d_l___rect}{SDL\_Rect}}\ *\ rects,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__opengl_8h_a619bc20e8198de3bd3f3d7fc34de66b2}{count}},\ \mbox{\hyperlink{_s_d_l__stdinc_8h_add440eff171ea5f55cb00c4a9ab8672d}{Uint32}}\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3ea846f998d64f079b86052b6c4193a8}{color}});}
+\DoxyCodeLine{00800\ }
+\DoxyCodeLine{00801\ \textcolor{comment}{/*\ !!!\ FIXME:\ merge\ this\ documentation\ with\ the\ wiki\ */}}
+\DoxyCodeLine{00859\ \textcolor{preprocessor}{\#define\ SDL\_BlitSurface\ SDL\_UpperBlit}}
+\DoxyCodeLine{00860\ }
+\DoxyCodeLine{00871\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_ac418c4404813eeb32f4e1b24f9deae96}{SDL\_UpperBlit}}}
+\DoxyCodeLine{00872\ \ \ \ \ (\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a72e0fdf0f845ded60b1fada9e9195cd7}{src}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_s_d_l___rect}{SDL\_Rect}}\ *\ srcrect,}
+\DoxyCodeLine{00873\ \ \ \ \ \ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a92034251bfd455d524a9b5610cddba00}{dst}},\ \mbox{\hyperlink{struct_s_d_l___rect}{SDL\_Rect}}\ *\ dstrect);}
+\DoxyCodeLine{00874\ }
+\DoxyCodeLine{00897\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a82bd1c0e0886d77e287207fe6351bf87}{SDL\_LowerBlit}}}
+\DoxyCodeLine{00898\ \ \ \ \ (\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a72e0fdf0f845ded60b1fada9e9195cd7}{src}},\ \mbox{\hyperlink{struct_s_d_l___rect}{SDL\_Rect}}\ *\ srcrect,}
+\DoxyCodeLine{00899\ \ \ \ \ \ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a92034251bfd455d524a9b5610cddba00}{dst}},\ \mbox{\hyperlink{struct_s_d_l___rect}{SDL\_Rect}}\ *\ dstrect);}
+\DoxyCodeLine{00900\ }
+\DoxyCodeLine{00901\ }
+\DoxyCodeLine{00910\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_aee44fe7d5dba376a971793d70ffcf55c}{SDL\_SoftStretch}}(\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a72e0fdf0f845ded60b1fada9e9195cd7}{src}},}
+\DoxyCodeLine{00911\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_s_d_l___rect}{SDL\_Rect}}\ *\ srcrect,}
+\DoxyCodeLine{00912\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a92034251bfd455d524a9b5610cddba00}{dst}},}
+\DoxyCodeLine{00913\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_s_d_l___rect}{SDL\_Rect}}\ *\ dstrect);}
+\DoxyCodeLine{00914\ }
+\DoxyCodeLine{00920\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_ac2fe0fda20d38a16ec1802da9d6e49a0}{SDL\_SoftStretchLinear}}(\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a72e0fdf0f845ded60b1fada9e9195cd7}{src}},}
+\DoxyCodeLine{00921\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_s_d_l___rect}{SDL\_Rect}}\ *\ srcrect,}
+\DoxyCodeLine{00922\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a92034251bfd455d524a9b5610cddba00}{dst}},}
+\DoxyCodeLine{00923\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_s_d_l___rect}{SDL\_Rect}}\ *\ dstrect);}
+\DoxyCodeLine{00924\ }
+\DoxyCodeLine{00925\ }
+\DoxyCodeLine{00926\ \textcolor{preprocessor}{\#define\ SDL\_BlitScaled\ SDL\_UpperBlitScaled}}
+\DoxyCodeLine{00927\ }
+\DoxyCodeLine{00938\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a90ac01634e9ee33764fcf5ec7bc43c46}{SDL\_UpperBlitScaled}}}
+\DoxyCodeLine{00939\ \ \ \ \ (\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a72e0fdf0f845ded60b1fada9e9195cd7}{src}},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_s_d_l___rect}{SDL\_Rect}}\ *\ srcrect,}
+\DoxyCodeLine{00940\ \ \ \ \ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a92034251bfd455d524a9b5610cddba00}{dst}},\ \mbox{\hyperlink{struct_s_d_l___rect}{SDL\_Rect}}\ *\ dstrect);}
+\DoxyCodeLine{00941\ }
+\DoxyCodeLine{00961\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a5c6b2f06726600d41ff75ff259d4383b}{SDL\_LowerBlitScaled}}}
+\DoxyCodeLine{00962\ \ \ \ \ (\mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a72e0fdf0f845ded60b1fada9e9195cd7}{src}},\ \mbox{\hyperlink{struct_s_d_l___rect}{SDL\_Rect}}\ *\ srcrect,}
+\DoxyCodeLine{00963\ \ \ \ \ \mbox{\hyperlink{struct_s_d_l___surface}{SDL\_Surface}}\ *\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a92034251bfd455d524a9b5610cddba00}{dst}},\ \mbox{\hyperlink{struct_s_d_l___rect}{SDL\_Rect}}\ *\ dstrect);}
+\DoxyCodeLine{00964\ }
+\DoxyCodeLine{00970\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a35875bf88b2d78e0990f5f13ef1cd0e1}{SDL\_SetYUVConversionMode}}(\mbox{\hyperlink{_s_d_l__surface_8h_a00a564600207cec7a2cb50a6e20d2446}{SDL\_YUV\_CONVERSION\_MODE}}\ \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a1e71d9c196e4683cc06c4b54d53f7ef5}{mode}});}
+\DoxyCodeLine{00971\ }
+\DoxyCodeLine{00977\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a00a564600207cec7a2cb50a6e20d2446}{SDL\_YUV\_CONVERSION\_MODE}}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a61d2c4412423e5d1a0e3426ee678d262}{SDL\_GetYUVConversionMode}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00978\ }
+\DoxyCodeLine{00985\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{begin__code_8h_aa4c7a931f4a968f818b2a1b10a432185}{DECLSPEC}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a00a564600207cec7a2cb50a6e20d2446}{SDL\_YUV\_CONVERSION\_MODE}}\ \mbox{\hyperlink{begin__code_8h_a81faf4ba0455dc75f2e0507eddb79401}{SDLCALL}}\ \mbox{\hyperlink{_s_d_l__surface_8h_a1cfad98219e074988d0c5731e304cda4}{SDL\_GetYUVConversionModeForResolution}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__opengl_8h_a9a82cf3caff84cabc4598e2619faac17}{width}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_s_d_l__opengl_8h_aa352f2804b9902ac30769c00dde75d5f}{height}});}
+\DoxyCodeLine{00986\ }
+\DoxyCodeLine{00987\ \textcolor{comment}{/*\ Ends\ C\ function\ definitions\ when\ using\ C++\ */}}
+\DoxyCodeLine{00988\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00989\ \}}
+\DoxyCodeLine{00990\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00991\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{close__code_8h}{close\_code.h}}"{}}}
+\DoxyCodeLine{00992\ }
+\DoxyCodeLine{00993\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SDL\_surface\_h\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00994\ }
+\DoxyCodeLine{00995\ \textcolor{comment}{/*\ vi:\ set\ ts=4\ sw=4\ expandtab:\ */}}
+
+\end{DoxyCode}

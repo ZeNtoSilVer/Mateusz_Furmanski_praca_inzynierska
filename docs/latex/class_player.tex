@@ -1,0 +1,264 @@
+\hypertarget{class_player}{}\doxysection{Player Class Reference}
+\label{class_player}\index{Player@{Player}}
+
+
+{\ttfamily \#include $<$Player.\+hpp$>$}
+
+Inheritance diagram for Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_player}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_ae7d4090bd7b8164de406345df20f6935}{Player}} (\mbox{\hyperlink{class_position}{Position}} p\+\_\+pos, \mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$p\+\_\+tex, int \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}}, int \mbox{\hyperlink{class_player_a8b4b2cea0c16669c309d27189b6da659}{window\+\_\+width}}, int \mbox{\hyperlink{class_player_aed5b50e792e0bacd8988d6fc9626a299}{window\+\_\+height}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_player_a1cb7ff18fe3b07cc1dcd27519bde8329}{update\+Position}} ()
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_player_a136c4e98f9233f25db84f2dfe028cf41}{decrease\+Speed}} ()
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_player_ad7d10124ba43a5d163e68dd1e1ac850f}{move}} (bool \mbox{\hyperlink{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aaadb45120aafd37a973140edee24708065}{LEFT}}, bool \mbox{\hyperlink{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aaaec8379af7490bb9eaaf579cf17876f38}{RIGHT}}, \mbox{\hyperlink{class_level_manager}{Level\+Manager}} \&l\+\_\+manager)
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_player_a494ffcf413795c08d8b81bbf5f036a8a}{jump}} (\mbox{\hyperlink{class_level_manager}{Level\+Manager}} \&l\+\_\+manager)
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_player_a1f0aeea114080c776ea91b569c478e31}{add\+Bullet}} (\mbox{\hyperlink{class_bullet}{Bullet}} $\ast$bullet)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_bullet}{Bullet}} $\ast$ $>$ \mbox{\hyperlink{class_player_a387006e0389129033279784fc9ae0041}{get\+Bullets}} ()
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_player_ac00596583d8e9289a10abb58dab316eb}{shoot}} (int \mbox{\hyperlink{_s_d_l__opengl_8h_ad0e63d0edcdbd3d79554076bf309fd47}{x}}, int \mbox{\hyperlink{_s_d_l__opengl_8h_a1675d9d7bb68e1657ff028643b4037e3}{y}})
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_player_acd7e7c531820fe1b2b34484c213f730b}{handle\+Actions}} (\mbox{\hyperlink{union_s_d_l___event}{SDL\+\_\+\+Event}} \&\mbox{\hyperlink{_s_d_l__opengl__glext_8h_a03b04a5a978bad576866339075de01f6}{event}}, \mbox{\hyperlink{class_level_manager}{Level\+Manager}} \&l\+\_\+manager)
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_player_a31fbec523b845592afd9ed0c60f0ffb4}{handle\+Movement}} (const \mbox{\hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8}} $\ast$keyboard\+\_\+state, \mbox{\hyperlink{class_level_manager}{Level\+Manager}} \&l\+\_\+manager)
+\item 
+\mbox{\hyperlink{class_enemy}{Enemy}} $\ast$ \mbox{\hyperlink{class_player_a9eac08b7eb7626a1ee61c064e576ffcd}{will\+Collide\+With\+Any}} (\mbox{\hyperlink{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} direction, std\+::vector$<$ \mbox{\hyperlink{class_enemy}{Enemy}} $\ast$ $>$ enemies)
+\item 
+\mbox{\hyperlink{class_collectible}{Collectible}} $\ast$ \mbox{\hyperlink{class_player_aa76d125167852c60c7a081dee502e625}{will\+Collide\+With\+Any}} (\mbox{\hyperlink{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} direction, std\+::vector$<$ \mbox{\hyperlink{class_collectible}{Collectible}} $\ast$ $>$ \mbox{\hyperlink{class_player_af4e1ff87c318437e75843b86dd8478fa}{collectibles}})
+\item 
+bool \mbox{\hyperlink{class_player_a06e38c0f57e67eb006c9d09779bd8f8f}{is\+Alive}} ()
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_player_a1e4b3e6ef91fc400ff2c6c26b1370f8c}{die}} ()
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_player_a6c29b94c9e168173e24053a029b68cb5}{collect}} (\mbox{\hyperlink{class_collectible}{Collectible}} $\ast$collectible)
+\item 
+bool \mbox{\hyperlink{class_player_afe9bfdc5d0fe551558c3c301d401984f}{can\+Finish}} (int collectibles\+\_\+to\+\_\+finish)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_movable}{Movable}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_movable_ade056c66e9402de8be6b3c4ed4d36f01}{Movable}} (\mbox{\hyperlink{class_position}{Position}} p\+\_\+pos, \mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$p\+\_\+tex, int \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}})
+\item 
+\mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_movable_ae260c4bb16981984f20bda72a586cf0a}{get\+Movement\+Vector}} ()
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_movable_afc5ced2d1569775b62e9d6198779c622}{set\+Movement\+Vector}} (\mbox{\hyperlink{class_position}{Position}} new\+\_\+vector)
+\item 
+bool \mbox{\hyperlink{class_movable_a1bf544913ec439bb6841bf85880f87ab}{will\+Collide\+With}} (\mbox{\hyperlink{class_entity}{Entity}} $\ast$entity, \mbox{\hyperlink{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} direction=\mbox{\hyperlink{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa627abe5a430420baf29ebe1940a7f2fb}{BOTH}})
+\item 
+\mbox{\hyperlink{class_entity}{Entity}} $\ast$ \mbox{\hyperlink{class_movable_ae1c993a10326aa91adf723da44d329da}{will\+Collide\+With\+Any}} (\mbox{\hyperlink{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} direction=\mbox{\hyperlink{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa627abe5a430420baf29ebe1940a7f2fb}{BOTH}}, std\+::vector$<$ \mbox{\hyperlink{class_entity}{Entity}} $\ast$ $>$ ents=\mbox{\hyperlink{class_entity_a438762a5daaae32a28fb9c6a8e17518f}{entities}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_entity_a03295af11e6abad8e19d55f0df24026f}{Entity}} (\mbox{\hyperlink{class_position}{Position}} p\+\_\+pos, \mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$p\+\_\+tex, int \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}})
+\item 
+\mbox{\hyperlink{class_entity_adf6d3f7cb1b2ba029b6b048a395cc8ae}{$\sim$\+Entity}} ()
+\item 
+\mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_entity_a51d7ac9dcaa0d12657fbd97b272fca9f}{get\+Position}} ()
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_entity_ad14ffed3a2388f9d3280fdc59ee5fbd0}{set\+Position}} (\mbox{\hyperlink{class_position}{Position}} new\+\_\+pos)
+\item 
+\mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$ \mbox{\hyperlink{class_entity_a25b50625a770e24dcafc25aa505fc54d}{get\+Texture}} ()
+\item 
+\mbox{\hyperlink{struct_s_d_l___rect}{SDL\+\_\+\+Rect}} \mbox{\hyperlink{class_entity_a20a9a1b66c626ef91d2ec6884c887988}{get\+Current\+Frame}} ()
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_entity_ad70d8510cd8834aa42985cd6ff76ea6b}{toggle\+Renderable}} ()
+\item 
+int \mbox{\hyperlink{class_entity_a352c44a083ab3d5d06cf4e0f6fe7606e}{get\+Size}} ()
+\item 
+\mbox{\hyperlink{_entity_8hpp_ad79a57ed3105eb60d991a1aeb4a9dc44}{Entity\+Type}} \mbox{\hyperlink{class_entity_ab3a2d08c8cf0a01210e2ece8ff721174}{get\+Type}} ()
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_entity_aedbd9622f9be98c2d28bd664442fbef8}{set\+Type}} (\mbox{\hyperlink{_entity_8hpp_ad79a57ed3105eb60d991a1aeb4a9dc44}{Entity\+Type}} \mbox{\hyperlink{_s_d_l__opengl_8h_ad5ddf6fca7b585646515660e810e0188}{type}})
+\item 
+\mbox{\hyperlink{_entity_8hpp_a884b333dc836c3eabfe7a675c0c72022}{Entity\+State}} \mbox{\hyperlink{class_entity_af1c844c5aba6d74840b84dbe55cfc91b}{get\+State}} ()
+\item 
+\mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} \mbox{\hyperlink{class_entity_ae47679578adae2fb00f618b1e7e9f565}{set\+State}} (\mbox{\hyperlink{_entity_8hpp_a884b333dc836c3eabfe7a675c0c72022}{Entity\+State}} \mbox{\hyperlink{class_entity_a5a61b24410d1e9e7560ab142cf439dc8}{state}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_player_a6fe4aafe4f20432b7e7e89863e45dc61}{accel\+\_\+max}} = 5
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_bullet}{Bullet}} $\ast$ $>$ \mbox{\hyperlink{class_player_a894a5a99eceaa634d5746f3282048ed3}{bullets}}
+\item 
+int \mbox{\hyperlink{class_player_a8b4b2cea0c16669c309d27189b6da659}{window\+\_\+width}}
+\item 
+int \mbox{\hyperlink{class_player_aed5b50e792e0bacd8988d6fc9626a299}{window\+\_\+height}}
+\item 
+int \mbox{\hyperlink{class_player_af4e1ff87c318437e75843b86dd8478fa}{collectibles}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ \mbox{\hyperlink{class_entity}{Entity}} $\ast$ $>$ \mbox{\hyperlink{class_entity_a438762a5daaae32a28fb9c6a8e17518f}{entities}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_entity_a6e6dcdb945a8b7e255e550c9b960097f}{is\+Position\+Taken}} (\mbox{\hyperlink{class_position}{Position}} \&pos, int \mbox{\hyperlink{_s_d_l__opengl__glext_8h_a3d1e3edfcf61ca2d831883e1afbad89e}{size}}, \mbox{\hyperlink{class_entity}{Entity}} $\ast$entity)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_movable}{Movable}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_movable_ae873752e2f7c5f9ab856ff9cadaf5bf5}{movement\+\_\+vector}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_entity}{Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_entity_8hpp_ad79a57ed3105eb60d991a1aeb4a9dc44}{Entity\+Type}} \mbox{\hyperlink{class_entity_a4bc4656e671f86ebd33eaa78d1855ea9}{type}}
+\item 
+\mbox{\hyperlink{_entity_8hpp_a884b333dc836c3eabfe7a675c0c72022}{Entity\+State}} \mbox{\hyperlink{class_entity_a5a61b24410d1e9e7560ab142cf439dc8}{state}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_player_ae7d4090bd7b8164de406345df20f6935}\label{class_player_ae7d4090bd7b8164de406345df20f6935}} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}}}]{p\+\_\+pos,  }\item[{\mbox{\hyperlink{_s_d_l__render_8h_a17850d7f1f5de457727cb3cf66b3a7f5}{SDL\+\_\+\+Texture}} $\ast$}]{p\+\_\+tex,  }\item[{int}]{size,  }\item[{int}]{window\+\_\+width,  }\item[{int}]{window\+\_\+height }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_a1f0aeea114080c776ea91b569c478e31}\label{class_player_a1f0aeea114080c776ea91b569c478e31}} 
+\index{Player@{Player}!addBullet@{addBullet}}
+\index{addBullet@{addBullet}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{addBullet()}{addBullet()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Player\+::add\+Bullet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bullet}{Bullet}} $\ast$}]{bullet }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_afe9bfdc5d0fe551558c3c301d401984f}\label{class_player_afe9bfdc5d0fe551558c3c301d401984f}} 
+\index{Player@{Player}!canFinish@{canFinish}}
+\index{canFinish@{canFinish}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{canFinish()}{canFinish()}}
+{\footnotesize\ttfamily bool Player\+::can\+Finish (\begin{DoxyParamCaption}\item[{int}]{collectibles\+\_\+to\+\_\+finish }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_a6c29b94c9e168173e24053a029b68cb5}\label{class_player_a6c29b94c9e168173e24053a029b68cb5}} 
+\index{Player@{Player}!collect@{collect}}
+\index{collect@{collect}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{collect()}{collect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Player\+::collect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_collectible}{Collectible}} $\ast$}]{collectible }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_a136c4e98f9233f25db84f2dfe028cf41}\label{class_player_a136c4e98f9233f25db84f2dfe028cf41}} 
+\index{Player@{Player}!decreaseSpeed@{decreaseSpeed}}
+\index{decreaseSpeed@{decreaseSpeed}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{decreaseSpeed()}{decreaseSpeed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Player\+::decrease\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_a1e4b3e6ef91fc400ff2c6c26b1370f8c}\label{class_player_a1e4b3e6ef91fc400ff2c6c26b1370f8c}} 
+\index{Player@{Player}!die@{die}}
+\index{die@{die}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{die()}{die()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Player\+::die (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_a387006e0389129033279784fc9ae0041}\label{class_player_a387006e0389129033279784fc9ae0041}} 
+\index{Player@{Player}!getBullets@{getBullets}}
+\index{getBullets@{getBullets}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getBullets()}{getBullets()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_bullet}{Bullet}} $\ast$ $>$ Player\+::get\+Bullets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_acd7e7c531820fe1b2b34484c213f730b}\label{class_player_acd7e7c531820fe1b2b34484c213f730b}} 
+\index{Player@{Player}!handleActions@{handleActions}}
+\index{handleActions@{handleActions}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{handleActions()}{handleActions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Player\+::handle\+Actions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{union_s_d_l___event}{SDL\+\_\+\+Event}} \&}]{event,  }\item[{\mbox{\hyperlink{class_level_manager}{Level\+Manager}} \&}]{l\+\_\+manager }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_a31fbec523b845592afd9ed0c60f0ffb4}\label{class_player_a31fbec523b845592afd9ed0c60f0ffb4}} 
+\index{Player@{Player}!handleMovement@{handleMovement}}
+\index{handleMovement@{handleMovement}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{handleMovement()}{handleMovement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Player\+::handle\+Movement (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_s_d_l__stdinc_8h_a2944638813a090aa23e62f4da842c3e2}{Uint8}} $\ast$}]{keyboard\+\_\+state,  }\item[{\mbox{\hyperlink{class_level_manager}{Level\+Manager}} \&}]{l\+\_\+manager }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_a06e38c0f57e67eb006c9d09779bd8f8f}\label{class_player_a06e38c0f57e67eb006c9d09779bd8f8f}} 
+\index{Player@{Player}!isAlive@{isAlive}}
+\index{isAlive@{isAlive}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{isAlive()}{isAlive()}}
+{\footnotesize\ttfamily bool Player\+::is\+Alive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_a494ffcf413795c08d8b81bbf5f036a8a}\label{class_player_a494ffcf413795c08d8b81bbf5f036a8a}} 
+\index{Player@{Player}!jump@{jump}}
+\index{jump@{jump}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{jump()}{jump()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Player\+::jump (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_level_manager}{Level\+Manager}} \&}]{l\+\_\+manager }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_ad7d10124ba43a5d163e68dd1e1ac850f}\label{class_player_ad7d10124ba43a5d163e68dd1e1ac850f}} 
+\index{Player@{Player}!move@{move}}
+\index{move@{move}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Player\+::move (\begin{DoxyParamCaption}\item[{bool}]{LEFT,  }\item[{bool}]{RIGHT,  }\item[{\mbox{\hyperlink{class_level_manager}{Level\+Manager}} \&}]{l\+\_\+manager }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_ac00596583d8e9289a10abb58dab316eb}\label{class_player_ac00596583d8e9289a10abb58dab316eb}} 
+\index{Player@{Player}!shoot@{shoot}}
+\index{shoot@{shoot}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{shoot()}{shoot()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Player\+::shoot (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_a1cb7ff18fe3b07cc1dcd27519bde8329}\label{class_player_a1cb7ff18fe3b07cc1dcd27519bde8329}} 
+\index{Player@{Player}!updatePosition@{updatePosition}}
+\index{updatePosition@{updatePosition}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{updatePosition()}{updatePosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_s_d_l__opengl_8h_a46df6112013cf583e82b25cebd5cb499}{void}} Player\+::update\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_aa76d125167852c60c7a081dee502e625}\label{class_player_aa76d125167852c60c7a081dee502e625}} 
+\index{Player@{Player}!willCollideWithAny@{willCollideWithAny}}
+\index{willCollideWithAny@{willCollideWithAny}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{willCollideWithAny()}{willCollideWithAny()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_collectible}{Collectible}} $\ast$ Player\+::will\+Collide\+With\+Any (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{direction,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_collectible}{Collectible}} $\ast$ $>$}]{collectibles }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_a9eac08b7eb7626a1ee61c064e576ffcd}\label{class_player_a9eac08b7eb7626a1ee61c064e576ffcd}} 
+\index{Player@{Player}!willCollideWithAny@{willCollideWithAny}}
+\index{willCollideWithAny@{willCollideWithAny}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{willCollideWithAny()}{willCollideWithAny()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_enemy}{Enemy}} $\ast$ Player\+::will\+Collide\+With\+Any (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_entity_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{direction,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_enemy}{Enemy}} $\ast$ $>$}]{enemies }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_player_a6fe4aafe4f20432b7e7e89863e45dc61}\label{class_player_a6fe4aafe4f20432b7e7e89863e45dc61}} 
+\index{Player@{Player}!accel\_max@{accel\_max}}
+\index{accel\_max@{accel\_max}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{accel\_max}{accel\_max}}
+{\footnotesize\ttfamily int Player\+::accel\+\_\+max = 5}
+
+\mbox{\Hypertarget{class_player_a894a5a99eceaa634d5746f3282048ed3}\label{class_player_a894a5a99eceaa634d5746f3282048ed3}} 
+\index{Player@{Player}!bullets@{bullets}}
+\index{bullets@{bullets}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{bullets}{bullets}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_bullet}{Bullet}}$\ast$$>$ Player\+::bullets}
+
+\mbox{\Hypertarget{class_player_af4e1ff87c318437e75843b86dd8478fa}\label{class_player_af4e1ff87c318437e75843b86dd8478fa}} 
+\index{Player@{Player}!collectibles@{collectibles}}
+\index{collectibles@{collectibles}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{collectibles}{collectibles}}
+{\footnotesize\ttfamily int Player\+::collectibles = 0}
+
+\mbox{\Hypertarget{class_player_aed5b50e792e0bacd8988d6fc9626a299}\label{class_player_aed5b50e792e0bacd8988d6fc9626a299}} 
+\index{Player@{Player}!window\_height@{window\_height}}
+\index{window\_height@{window\_height}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{window\_height}{window\_height}}
+{\footnotesize\ttfamily int Player\+::window\+\_\+height}
+
+\mbox{\Hypertarget{class_player_a8b4b2cea0c16669c309d27189b6da659}\label{class_player_a8b4b2cea0c16669c309d27189b6da659}} 
+\index{Player@{Player}!window\_width@{window\_width}}
+\index{window\_width@{window\_width}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{window\_width}{window\_width}}
+{\footnotesize\ttfamily int Player\+::window\+\_\+width}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_player_8hpp}{Player.\+hpp}}\item 
+src/\mbox{\hyperlink{_player_8cpp}{Player.\+cpp}}\end{DoxyCompactItemize}
